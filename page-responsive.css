@@ -1,0 +1,105 @@
+/* Task 1: Design a responsive flex layout */
+.section-1 .container {
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    padding: 5px;
+}
+
+.section-1 .item-1 {
+    height: 20vh;
+    width: 30%;
+    background-color: gray;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-1 .item-2 {
+    height: 20vh;
+    width: 70%;
+    background-color: bisque;
+    border-radius: 7px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+    .section-1 .container {
+        flex-direction: column;
+    }
+
+    .section-1 .item-1 {
+        height: 15vh;
+        width: 100%;
+    }
+
+    .section-1 .item-2 {
+        height: 45vh;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+
+
+/* Task 2: Design a responsive grid layout */
+.section-2 .item-1 {
+    background-color: lightcoral;
+    grid-area: first;
+    height: 200px;
+}
+
+.section-2 .item-2 {
+    background-color: orange;
+    grid-area: second;
+}
+
+.section-2 .item-3 {
+    background-color: violet;
+    grid-area: third;
+}
+
+.section-2 .item-4 {
+    background-color: cadetblue;
+    grid-area: fourth;
+}
+
+.section-2 .box {
+    padding: 5px;
+    margin: 2px;
+}
+
+.section-2 .container {
+    color: white;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "first first second second"
+        "first first third fourth";
+}
+
+@media screen and (max-width: 576px) {
+    .section-2 .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "first"
+            "second"
+            "third"
+            "fourth";
+    }
+
+    .section-2 .box {
+        padding: 5px;
+        margin: 2px;
+        height: 200px;
+        border-radius: 3px;
+    }
+}
