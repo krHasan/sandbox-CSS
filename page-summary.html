@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SandBox | Summary</title>
+    <link rel="icon" type="image/x-icon" href="./title-icon.png">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        const pageName = 'page-summary';
+    </script>
+    <script src="index.js"></script>
+</head>
+
+<body class="container mx-auto">
+    <header>
+        <div id="menuContainer"></div>
+        <p><span style="font-weight: bold;">SHP</span> = Short Hand Property; <span
+                style="font-weight: bold;">TRBL</span> = Top Right Bottom Left;</p>
+    </header>
+
+    <main class="grid grid-cols-1 xl:grid-cols-2 gap-3 mb-56">
+
+        <!-- All About Positioning -->
+        <section>
+            <h1>All About Positioning</h1>
+            <div>
+                <pre>
+<code>
+ {
+    clear: none|left|right|both;
+    float: none|left|right;
+    left: auto|(length);
+    right: auto|(length);
+    top: auto|(length);
+    bottom: auto|(length);
+    position: static|absolute|fixed|relative|sticky;
+ }
+</code>
+                        </pre>
+            </div>
+        </section>
+
+        <!-- Selector Reference -->
+        <section>
+            <h1>Selector Reference</h1>
+            <div>
+                <pre>
+<code>
+    *
+    .class
+    #id
+    element
+
+    element,.class,#id {Selects all the mentioned elements/To select siblings}
+
+    element element |
+    #id element     |{Selects all the descendant element}
+    .class element  |
+
+    element.class |
+    element#id    |{Selects the element where the class/id is the mentioned name}
+    .class.class |
+    #id.class    |{Selects those elements where these are applied togther}
+
+    element>element {Select childs}
+    element+element {Select next sibling}
+    element1~element2 {Selects general sibling}
+
+    element[attribute]       |
+    [attribute]              |
+    element[attribute=value] |{Selects elements with the attribute}
+    [attribute=value]        |
+    [attribute~=value] {Selects element with the specified value}
+    [attribute|=value] |
+    [attribute^=value] |{Selects element starting with the specified value}
+    [attribute$=value] {Ends with specified value}
+    [attribute*=value] {Contains the value}
+
+    :link
+    :active
+    :checked
+    :visited
+
+    :hover
+    :focus
+    :disabled
+    :enabled
+    :empty
+    :required
+
+    :valid
+    :invalid
+    :in-range
+    :target
+    :root
+    :read-write
+    :read-only
+    :out-of-range
+    :optional
+    :lang(language)
+
+    :not(selector)
+    :only-child
+    :first-child
+    :last-child
+    :nth-child(n)
+    :nth-last-child(n)
+    :only-of-type
+    :first-of-type
+    :last-of-type
+    :nth-of-type(n)
+    :nth-last-of-type(n)
+
+    ::after
+    ::before
+    ::selection
+    ::first-line
+    ::first-letter
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Border -->
+        <section>
+            <h1>Border</h1>
+            <div>
+                <pre>
+<code>
+ {
+    (SHP) border: border-width |  border-style (required) | border-color;
+    border-width: (TRBL supported) medium | thin | thick | (length);
+    border-style: (TRBL supported) none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset;
+    border-color: (TRBL supported) (color)|transparent;
+    border-collapse: separate|collapse;
+    border-radius: (TRBL supported) (length)|%);
+    border-spacing: (length);
+
+    (SHP) border-top: border-top-width | border-top-style (required) | border-top-color;
+    border-top-width: medium|thin|thick|(length);
+    border-top-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset;
+    border-top-color: (color)|transparent;
+    border-top-left-radius: (length)|% [(length)|%];
+    border-top-right-radius: (length)|% [(length)|%];
+
+    (SHP) border-right: border-right-width | border-right-style (required) | border-right-color;
+    border-right-width: medium|thin|thick|(length);
+    border-right-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset;
+    border-right-color: (color)|transparent;
+
+    (SHP) border-bottom: border-bottom-width | border-bottom-style | border-bottom-color;
+    border-bottom-width: medium|thin|thick|(length);
+    border-bottom-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset;
+    border-bottom-color: (color)|transparent;
+    border-bottom-left-radius: (length)|% [(length)|%];
+    border-bottom-right-radius: (length)|% [(length)|%];
+
+    (SHP) border-left: border-left-width | border-left-style (required) | border-left-color;
+    border-left-width: medium|thin|thick|(length);
+    border-left-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset;
+    border-left-color: (color)|transparent;
+
+    (SHP) border-image: border-image-source | border-image-slice | border-image-width | border-image-outset | border-image-repeat;
+    border-image-source: none|url();
+    border-image-slice: (number)|%|fill;
+    border-image-width: (number)|%|auto;
+    border-image-outset: (length)|(number));
+    border-image-repeat: stretch|repeat|round;
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Miscellaneous -->
+        <section>
+            <h1>Miscellaneous</h1>
+            <div>
+                <pre>
+<code>
+ {
+    height: auto|(length);
+    max-height: none|(length);
+    min-height: (length);
+    width: auto|(value);
+    max-width: none|(length);
+    min-width: (length);
+    opacity: (number);
+    z-index: auto|(number);
+    visibility: visible|hidden|collapse;
+    
+    user-select: auto|none|text|all;
+    all: initial | inherit | unset;
+    caret-color: auto|(color);
+    counter-increment: none|(id);
+    counter-reset: none|(id number);
+    cursor: (value)(There are 39 values available);
+    page-break-after: auto|always|avoid|left|right;
+    page-break-before: auto|always|avoid|left|right;
+    page-break-inside: auto|avoid;
+    pointer-events: auto|none;
+    quotes: none|(string);
+    tab-size: (number)|(length);
+    unicode-bidi: normal|embed|bidi-override;
+    @import url|(string) list-of-mediaqueries;
+    @media not|only mediatype and (media feature and|or|not mediafeature) {
+        CSS-Code;
+    }
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Background -->
+        <section>
+            <h1>Background</h1>
+            <div>
+                <pre>
+<code>
+ {
+    backface-visibility: hidden | visible;
+    (SHP) background: background-color | background-image | background-position | background-size
+                    background-repeat | background-origin | background-clip | background-attachment;
+    background-color: (color) | transparent;
+    background-image: url() | none;
+    background-position: left right top bottom center ..........;
+    background-size: auto | (length:width height) | cover | contain;
+    background-repeat: repeat | repeat-x | repeat-y | no-repeat;
+    background-origin: padding-box | border-box | content-box;
+    background-clip: border-box | padding-box | content-box;
+    background-attachment: scroll | fixed | local;
+    background-blend-mode: normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|(color)|luminosity;
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Padding -->
+        <section>
+            <h1>Padding</h1>
+            <div>
+                <pre>
+<code>
+ {
+    (SHP) padding: (TRBL Supported) (length) | padding-top | padding-right | padding-bottom | padding-left
+    padding-top: (length);
+    padding-right: (length);
+    padding-bottom: (length);
+    padding-left: (length);
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Margin -->
+        <section>
+            <h1>Margin</h1>
+            <div>
+                <pre>
+<code>
+ {
+    (SHP) margin: (TRBL Supported) (length) | margin-top | margin-right | margin-bottom | margin-left
+    margin-top: (length)|auto;
+    margin-right: (length)|auto;
+    margin-bottom: (length)|auto;
+    margin-left: (length)|auto;
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Outline -->
+        <section>
+            <h1>Outline</h1>
+            <div>
+                <pre>
+<code>
+ {
+    (SHP) outline: outline-width | outline-style (required) | outline-color
+    outline-width: medium|thin|thick|(length);
+    outline-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset;
+    outline-color: invert|(color);
+    outline-offset: (length);
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Overflow -->
+        <section>
+            <h1>Overflow</h1>
+            <div>
+                <pre>
+<code>
+ {
+    overflow: overflow: visible|hidden|scroll|auto;
+    overflow-x: visible|hidden|scroll|auto;
+    overflow-y: visible|hidden|scroll|auto;
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Display -->
+        <section>
+            <h1>Display</h1>
+            <div>
+                <pre>
+<code>
+ {
+    display: inline | block | flex | grid | inline-block | inline-flex | inline-grid | inline-table | list-item
+            run-in | table | table-caption | table-column | table-column-group | table-header-group | table-footer-group
+            table-row-group | table-row | table-cell | none;
+    
+    (SHP) flex: flex-grow | flex-shrink | flex-basis
+    flex-grow: (number);
+    flex-shrink: (number);
+    flex-basis: (number);
+    (SHP) flex-flow: flex-direction | flex-wrap
+    flex-direction: row|row-reverse|column|column-reverse;
+    flex-wrap: nowrap|wrap|wrap-reverse;
+    justify-content: flex-start|flex-end|center|space-between|space-around;
+    align-content: center | stretch | flex-end | flex-start | space-around | space-between;
+    align-items: center | stretch | baseline | flex-end | flex-start;
+    align-self: auto | baseline | center | flex-end | flex-start | stretch;
+    order: (number);
+    
+    (SHP) grid: grid-template-rows | grid-template-columns | grid-template-areas | grid-auto-rows | grid-auto-columns | grid-auto-flow
+    (SHP) grid-template: grid-template-rows | grid-template-columns | grid-template-areas
+    grid-template-rows: none|auto|max-content|min-content|(length);
+    grid-template-columns: none|auto|max-content|min-content|(length);
+    grid-template-areas: none|(itemnames);
+    grid-auto-rows: auto|max-content|min-content|(length);
+    grid-auto-columns: auto|max-content|min-content|(length);
+    grid-auto-flow: row|columns|row dense|column dense;
+    (SHP) grid-column: grid-column-start | grid-column-end
+    grid-column-start: auto|(column-line);
+    grid-column-end: auto|(column-line)|span n;
+    (SHP) grid-gap: grid-column-gap | grid-row-gap
+    grid-column-gap: (length);
+    grid-row-gap: (length);
+    (SHP) grid-row: grid-row-start | grid-row-end
+    grid-row-start: auto|(row-line);
+    grid-row-end: auto|(row-line)|span n;
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Box -->
+        <section>
+            <h1>Box</h1>
+            <div>
+                <pre>
+<code>
+ {
+    box-decoration-break: slice|clone|unset;
+    box-shadow: none|h-offset v-offset blur spread (color) |inset;
+    box-sizing: content-box|border-box;
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Table -->
+        <section>
+            <h1>Table</h1>
+            <div>
+                <pre>
+<code>
+ {
+    caption-side: bottom | top;
+    empty-cells: show|hide;
+    table-layout: auto|fixed; 
+ }      
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Image & Audio & Video -->
+        <section>
+            <h1>Image & Audio & Video</h1>
+            <div>
+                <pre>
+<code>
+ {
+    clip: auto|(shape);
+    filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url();
+    object-fit: fill|contain|cover|scale-down|none;
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- list -->
+        <section>
+            <h1>list</h1>
+            <div>
+                <pre>
+<code>
+ {
+    (SHP) list-style: list-style-type | list-style-position | list-style-image
+    list-style-type: value(24 values);
+    list-style-position: inside|outside;
+    list-style-image: none|url();
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Text -->
+        <section>
+            <h1>Text</h1>
+            <div>
+                <pre>
+<code>
+ {
+    color: (color name);
+    text-align: left|right|center|justify;
+    letter-spacing: normal|(length);
+    line-height: normal|(number)|(length);
+    text-indent: (length);
+    text-shadow: h-shadow v-shadow blur-radius (color)|none;
+    text-transform: none|capitalize|uppercase|lowercase;
+    white-space: normal|nowrap|pre|pre-line|pre-wrap;
+    word-spacing: normal|(length);
+    
+    (SHP) text-decoration: text-decoration-line (required) | text-decoration-color | text-decoration-style
+    text-decoration-line: none|underline|overline|line-through;
+    text-decoration-color: color;
+    text-decoration-style: solid|double|dotted|dashed|wavy;
+    
+    direction: ltr|rtl;
+    resize: none|both|horizontal|vertical;
+    text-align-last: auto|left|right|center|justify|start|end;
+    text-justify: auto|inter-word|inter-character|none;
+    text-overflow: clip|ellipsis|(string);
+    vertical-align: baseline|(length)|sub|super|top|text-top|middle|bottom|text-bottom;
+    word-break: normal|break-all|keep-all;
+    word-wrap: normal|break-word;
+    
+    (SHP) font: font-style | font-variant | font-weight | font-size/line-height | font-family
+    font-style: normal|italic|oblique;
+    font-variant: normal|small-caps;
+    font-weight: normal|bold|bolder|lighter|(number);
+    font-size: medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|(length);
+    font-family: (family-name|generic-family);
+    font-kerning: auto|normal
+    @font-face ....
+    
+    (SHP) columns: column-width | column-count;
+    column-width: auto|(length);
+    column-count: (number)|auto;
+    (SHP) column-rule: column-rule-width | column-rule-style (required) | column-rule-color;
+    column-rule-width: medium|thin|thick|(length);
+    column-rule-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset;
+    column-rule-color: color;
+    column-fill: balance|auto;
+    column-gap: (length)|normal;
+    column-span: 1|all;
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Animation -->
+        <section>
+            <h1>Animation</h1>
+            <div>
+                <pre>
+<code>
+ {
+    (SHP) animation: animation-name | animation-duration | animation-timing-function | animation-delay
+            animation-iteration-count | animation-direction | animation-fill-mode | animation-play-state;
+    animation-name: (keyframename);
+    animation-duration: (name);
+    animation-timing-function: linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(int,start|end) | cubic-bezier(n,n,n,n);
+    animation-delay: (time);
+    animation-iteration-count: (number);
+    animation-direction: normal | reverse | alternate | alternate-reverse;
+    animation-fill-mode: none | forwards | backwards | both;
+    animation-play-state: paused | running;
+    @keyframes animationname {
+    keyframes-selector {css-styles;}
+    }
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Transform -->
+        <section>
+            <h1>Transform</h1>
+            <div>
+                <pre>
+<code>
+ {
+    perspective: (length);
+    perspective-origin: x-axis y-axis;
+    transform: none|(transform-functions)(23 functions);
+    transform-origin: x-axis y-axis z-axis;
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Transitions -->
+        <section>
+            <h1>Transitions</h1>
+            <div>
+                <pre>
+<code>
+ {
+    (SHP) transition: transition-property | transition-duration | transition-timing-function | transition-delay
+    transition-property: none|all|(property);
+    transition-duration: (time);
+    transition-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n);
+    transition-delay: (time);
+ }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Pseudo Used -->
+        <section>
+            <h1></h1>
+            <div>
+                <pre>
+<code>
+    {
+        content: normal|none|counter|attr|(string)|open-quote|close-quote|no-open-quote|no-close-quote|url;
+    }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Functions -->
+        <section>
+            <h1>Functions</h1>
+            <div>
+                <pre>
+<code>
+    attr()
+    calc()
+    cubic-bezier()
+    hsl()
+    hsla()
+    linear-gradient()
+    repeating-linear-gradient()
+    radial-gradient()
+    repeating-radial-gradient()
+    rgb()
+    rgba()
+    var()
+</code>
+                </pre>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -14,15 +14,41 @@ $(document).ready(function () {
             })
 
             // #015493 light blue
-            let lightBlueArray = ['p', 'table', 'label', 'input', 'div', 'link', 'rel', 'href', 'crossorigin'];
+            let lightBlueArray = ['p', 'table', 'label', 'input', 'div', 'link', 'rel', 'href', 'crossorigin', 'url', 'active',
+                'checked', 'visited', 'hover', 'focus', 'disabled', 'enabled', 'empty', 'required', 'valid', 'invalid', 'in-range',
+                'target', 'root', 'read-write', 'read-only', 'out-of-range', 'optional', 'lang', 'not', 'only-child', 'first-child', 'last-child',
+                'nth-child', 'nth-last-child', 'only-of-type', 'first-of-type', 'last-of-type', 'nth-of-type', 'after', 'before', 'selection',
+                'first-line', 'first-letter', 'attr', 'calc', 'cubic-bezier', 'hsl', 'hsla', 'linear-gradient', 'repeating', 'radial-gradient',
+                'rgb', 'rgba', 'var', 'element', 'class', 'attribute', 'value', 'id'];
             lightBlueArray.forEach(element => {
                 text = text.replace(new RegExp("\\b" + element + "\\b", "gi"), '<span style="color: #015493">$&</span>');
             });
 
             // #C16D27 orange
-            let orangeArray = ['url', 'font-family'];
+            let orangeArray = ['font-family', 'display', 'flex-grow', 'flex-shrink', 'flex-basis', 'flex-flow',
+                'align-items', 'align-self', 'align-content', 'justify-content', 'flex-wrap', 'flex-direction',
+                'order', 'grid-template-rows', 'grid-template-columns', 'grid-template-areas', 'grid-auto-rows',
+                'grid-auto-columns', 'grid-auto-flow', 'grid-column-start', 'grid-column-end', 'grid-column-gap',
+                'grid-row-gap', 'grid-row-start', 'grid-row-end', 'grid-row', 'grid-gap', 'grid-column', 'overflow-x',
+                'overflow-y', 'overflow', 'margin', 'padding', 'float', 'clear', 'position', 'content', 'perspective', 'origin', 'transform',
+                'transition', 'property', 'duration', 'timing-function', 'delay', 'text-align', 'letter-spacing',
+                'line-height', 'text', 'indent', 'shadow', 'white-space', 'word-spacing', 'decoration', 'text-justify', 'vertical-align',
+                'font-style', 'font-variant', 'font-weight', 'font-size', 'width', 'rule', 'gap', 'fill', 'columns', 'word-break',
+                'animation', 'play-state', 'direction', 'iteration', 'count', 'mode', 'column', 'list-style', 'box', 'outline-style',
+                'outline-color', 'outline-offset', 'outline', 'background', 'border', 'height', 'max', 'min', 'z-index', 'opacity', 
+            'visibility', 'page-break', 'pointer-events', 'cursor', 'counter'];
             orangeArray.forEach(element => {
                 text = text.replace(new RegExp("\\b" + element + "\\b", "gi"), '<span style="color: #C16D27">$&</span>');
+            })
+
+            // #FFEE7F tael
+            let tealArray = ['none', 'left', 'right', 'both', 'auto', 'static', 'absolute', 'fixed', 'relative',
+                'sticky', 'visible', 'hidden', 'stretch', 'repeat', 'round', 'top', 'bottom', 'cover', 'contain', 'center',
+                'border-box', 'padding-box', 'content-box', 'scroll', 'local', 'solid', 'double', 'medium', 'thin', 'thick',
+                'invert', 'row', 'reverse', 'nowrap', 'wrap', 'flex-start', 'flex-end', 'space-between',
+                'space-around', 'baseline'];
+            tealArray.forEach(element => {
+                text = text.replace(new RegExp("\\b" + element + "\\b", "gi"), '<span style="color: #109cb2">$&</span>');
             })
 
             // #648522 light green
