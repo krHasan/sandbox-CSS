@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SandBox | Flex</title>
+    <link rel="icon" type="image/x-icon" href="./title-icon.png">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        const pageName = 'page-flex';
+    </script>
+    <script src="index.js"></script>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 2px solid tomato;
+            height: 70px;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            height: 30px;
+            width: 50px;
+            border: 2px dotted blue;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="container mx-auto">
+    <header>
+        <div id="menuContainer"></div>
+    </header>
+
+    <main class="mb-56">
+        <h1>A Guide To FlexBox</h1>
+        <p>Source: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="link-primary" target="_blank" rel="noopener noreferrer">A Complete Guide to Flexbox</a></p>
+        <p>- aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic</p>
+        <p>- The main idea behind the flex layout is to give the container the ability to alter its items’ width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes)</p>
+        <p>- Flexbox layout is most appropriate to the components of an application, and small-scale layouts</p>
+        <p>- Since flexbox is a whole module and not a single property, it involves a lot of things including its whole set of properties. Some of them are meant to be set on the container (parent element, known as “flex container”) whereas the others are meant to be set on the children (said “flex items”)</p>
+
+        <h2>Properties</h2>
+        <div class="badge badge-accent mt-2">container</div>
+        <div>
+            <pre>
+<code>
+    display				flex
+    justify-content		flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left 
+                            | right ... + safe | unsafe
+    align-items			stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end 
+                            | self-start | self-end + ... safe | unsafe;
+    align-content		flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end 
+                            | baseline | first baseline | last baseline + ... safe | unsafe	
+    flex-direction		row | row-reverse | column | column-reverse
+    flex-wrap			nowrap | wrap | wrap-reverse
+    flex-flow			column wrap
+    gap
+    row-gap
+    column-gap
+</code>
+            </pre>
+        </div>
+
+        <div class="badge badge-accent mt-2">items</div>
+        <div>
+            <pre>
+<code>
+    order			default is 0
+    flex-grow		default 0
+    flex-shrink		default 1
+    flex-basis		<number> | auto
+    flex			none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+    align-self		auto | flex-start | flex-end | center | baseline | stretch
+</code>
+            </pre>
+        </div>
+
+        <h3>flex-flow</h3>
+        <p>- This is a shorthand for the flex-direction and flex-wrap properties</p>
+        <p>- The default value is row nowrap</p>
+
+        <h3>justify-content</h3>
+        <p>- default is flex-start</p>
+        <p>- use to make a child horizontal center</p>
+
+        <h3>align-items</h3>
+        <p>- use to make a child vertically center</p>
+
+        <h1>justify-content</h1>
+        <p>justify-content: flex-end</p>
+        <div class="flex-container" style="justify-content: flex-end;">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <p>justify-content: center</p>
+        <div class="flex-container" style="justify-content: center;">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <p>justify-content: space-between</p>
+        <div class="flex-container" style="justify-content: space-between;">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <p>justify-content: space-around</p>
+        <div class="flex-container" style="justify-content: space-around;">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <p>justify-content: space-evenly</p>
+        <div class="flex-container" style="justify-content: space-evenly;">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+
+        <h1>align-items</h1>
+        <p>align-items: flex-end</p>
+        <div class="flex-container" style="align-items: flex-end;">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <p>align-items: center</p>
+        <div class="flex-container" style="align-items: center;">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+
+        <h1>align-content</h1>
+        <p>need to more work on it</p>
+        <div class="flex-container" style="align-content: space-between;">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+
+        <h1>flex-direction</h1>
+        <p>flex-direction: row-reverse;</p>
+        <div class="flex-container" style="flex-direction: row-reverse;">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <p>flex-direction: column;</p>
+        <div class="flex-container" style="flex-direction: column; height: 200px;">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <p>flex-direction: column-reverse;</p>
+        <div class="flex-container" style="flex-direction: column-reverse; height: 200px;">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+
+        <h1>flex-wrap</h1>
+        <p>flex-wrap: nowrap</p>
+        <div class="flex-container" style="flex-wrap: nowrap; width: 300px; height: 200px;">
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+        </div>
+
+        <p>flex-wrap: wrap;</p>
+        <div class="flex-container" style="flex-wrap: wrap; width: 300px; height: 200px;">
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+        </div>
+
+        <p>flex-wrap: wrap-reverse;</p>
+        <div class="flex-container" style="flex-wrap: wrap-reverse; width: 300px; height: 200px;">
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+            <div class="box">big content</div>
+        </div>
+    </main>
+
+</body>
+
+</html>
