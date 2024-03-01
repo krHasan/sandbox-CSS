@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SandBox | Fonts</title>
+    <link rel="icon" type="image/x-icon" href="./title-icon.png">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        const pageName = 'page-fonts';
+    </script>
+    <script src="index.js"></script>
+    <style>
+        .font-container-box {
+            padding: 10px 0
+        }
+    
+        .font-container-box :nth-child(1) {
+            text-decoration: underline;
+        }
+    
+        .font-container-box :nth-child(2) {
+            text-align: justify;
+            margin: 5px 0;
+        }
+    
+        .font-container-box :nth-child(3) {
+            text-align: justify;
+            font-weight: bold;
+        }
+    
+        /* Ubuntu */
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    
+        /* Segoe UI Light */
+        @font-face {
+            font-family: "Segoe UI Light";
+            src: url("./fonts/segoeuil.ttf");
+        }
+    
+        /* Roboto */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+    </style>
+</head>
+
+<body class="container mx-auto">
+    <header>
+        <div id="menuContainer"></div>
+    </header>
+
+    <main class="grid grid-cols-1 2xl:grid-cols-2 gap-3 mb-56">
+        <!-- How to use Google Fonts -->
+        <section>
+            <h1>How to use Google Fonts</h1>
+            <div class="badge badge-accent mt-2">In a Web by using link</div>
+            <div class="indicator w-full">
+                <span class="indicator-item indicator-center badge badge-primary">Declare</span>
+                <div class="w-full">
+                    <pre>
+<code>
+    < head>
+        < link rel="preconnect" href="https://fonts.googleapis.com">
+        < link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        < link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    < /head>
+</code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="badge badge-accent mt-2">In a Web by using import</div>
+            <div class="indicator w-full">
+                <span class="indicator-item indicator-center badge badge-primary">Declare</span>
+                <div class="w-full">
+                    <pre>
+<code>
+    //style
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap')
+    //style
+</code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="badge badge-primary mt-2">How to use</div>
+            <div>
+                <pre>
+<code>
+    .font-ubuntu {
+        font-family: "Ubuntu", sans-serif;
+    }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- How to use Downloaded Fonts -->
+        <section>
+            <h1>How to use Downloaded Fonts</h1>
+            <div class="badge badge-accent mt-2">.ttf file</div>
+            <div class="indicator w-full">
+                <span class="indicator-item indicator-center badge badge-primary">Declare</span>
+                <div class="w-full">
+                    <pre>
+<code>
+    @font-face {
+        font-family: Ubuntu; src: url("../fonts/Ubuntu-Light.ttf");
+    }
+    @font-face {
+        font-family: Ubuntu; font-weight: bold; src: url("../fonts/Ubuntu-Bold.ttf");
+    }
+</code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="badge badge-primary mt-2">How to use</div>
+            <div>
+                <pre>
+<code>
+    .font-ubuntu {
+        font-family: "Ubuntu", sans-serif;
+    }
+</code>
+                </pre>
+            </div>
+        </section>
+
+        <!-- Ubuntu -->
+        <section style='font-family: "Ubuntu", sans-serif !important'>
+            <h1>Ubuntu</h1>
+            <div class="badge badge-accent mt-2">Declare</div>
+            <div>
+                <pre>
+<code style='font-family: "Ubuntu", sans-serif !important'>
+    /* Ubuntu */
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+</code>
+                </pre>
+            </div>
+            <div class="badge badge-accent mt-2">How to use</div>
+            <div>
+                <pre>
+<code style='font-family: "Ubuntu", sans-serif !important'>
+    style='font-family: "Ubuntu", sans-serif';
+</code>
+                </pre>
+            </div>
+            <div class="font-container-box" style="font-size: 12px;">
+                <p>Font Size: 12</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+            <div class="font-container-box" style="font-size: 14px;">
+                <p>Font Size: 14</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+            <div class="font-container-box" style="font-size: 16px;">
+                <p>Font Size: 16</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+        </section>
+
+        <!-- Segoe UI Light -->
+        <section style='font-family: "Segoe UI Light", sans-serif !important'>
+            <h1>Segoe UI Light</h1>
+            <div class="badge badge-accent mt-2">Declare</div>
+            <div>
+                <pre>
+<code style='font-family: "Segoe UI Light", sans-serif !important'>
+    /* Segoe UI Light */
+    @font-face {
+        font-family: "Segoe UI Light";
+        src: url("./fonts/segoeuil.ttf");
+    }
+</code>
+                </pre>
+            </div>
+            <div class="badge badge-accent mt-2">How to use</div>
+            <div>
+                <pre>
+<code style='font-family: "Segoe UI Light", sans-serif !important'>
+    style='font-family: "Segoe UI Light", sans-serif';
+</code>
+                </pre>
+            </div>
+            <div class="font-container-box" style="font-size: 12px;">
+                <p>Font Size: 12</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+            <div class="font-container-box" style="font-size: 14px;">
+                <p>Font Size: 14</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+            <div class="font-container-box" style="font-size: 16px;">
+                <p>Font Size: 16</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+        </section>
+
+        <!-- Roboto -->
+        <section style='font-family: "Roboto", sans-serif !important'>
+            <h1>Roboto</h1>
+            <div class="badge badge-accent mt-2">Declare</div>
+            <div>
+                <pre>
+<code style='font-family: "Roboto", sans-serif !important'>
+    /* Roboto */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+</code>
+                </pre>
+            </div>
+            <div class="badge badge-accent mt-2">How to use</div>
+            <div>
+                <pre>
+<code style='font-family: "Roboto", sans-serif !important'>
+    style='font-family: "Roboto", sans-serif';
+</code>
+                </pre>
+            </div>
+            <div class="font-container-box" style="font-size: 12px;">
+                <p>Font Size: 12</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+            <div class="font-container-box" style="font-size: 14px;">
+                <p>Font Size: 14</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+            <div class="font-container-box" style="font-size: 16px;">
+                <p>Font Size: 16</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
