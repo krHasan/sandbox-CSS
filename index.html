@@ -7,8 +7,8 @@
     <title>CSS SandBox | Home</title>
     <link rel="icon" type="image/x-icon" href="./title-icon.png">
     <script src="jquery-3.6.0.min.js"></script>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css">
     <script>
         const pageName = 'home';
@@ -16,13 +16,32 @@
     <script src="index.js"></script>
 </head>
 
-<body>
+<body class="container mx-auto">
     <header>
         <div id="menuContainer"></div>
     </header>
 
     <main>
-        <h1>This is Home</h1>
+        <section>
+            <h1>How to use @media in CSS</h1>
+            <h5>Source:
+                <a href="https://css-tricks.com/a-complete-guide-to-css-media-queries/" class="link link-primary"
+                    target="_blank" rel="noopener noreferrer">A Complete Guide to CSS Media Queries</a>
+            </h5>
+            <div>
+                <pre>
+<code>
+    @media screen and (max-width: 576px) {
+        /* styles will be apply if screen size 0 - 576*/
+    }
+    
+    @media screen and (min-width: 577px) and (max-width: 992px) {
+        /* styles will be apply if screen size 577 - 992*/
+    }
+</code>
+                </pre>
+            </div>
+        </section>
     </main>
 
 </body>
