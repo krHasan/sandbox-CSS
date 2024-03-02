@@ -17,27 +17,236 @@
     <script src="index.js"></script>
 </head>
 
-<body class="container mx-auto">
+<body class="container mx-auto mb-56">
     <header>
         <div id="menuContainer"></div>
     </header>
 
     <main>
-        <section class="section-1">
-            <h1>Design a responsive flex layout</h1>
-            <div class="container">
-                <div class="item-1">Left</div>
-                <div class="item-2">Right</div>
+        <section>
+            <div class="section-1">
+                <h1>Design a responsive flex layout</h1>
+                <div class="container">
+                    <div class="item-1">item-1</div>
+                    <div class="item-2">item-2</div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap">
+
+                <div>
+                    <pre>
+<code>
+    < div class="section-1">
+        < h1>Design a responsive flex layout< /h1>  
+        < div class="container">
+            < div class="item-1">item-1< /div>
+            < div class="item-2">item-2< /div>
+        < /div>
+    < /div>
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .section-1 .container {
+        border: 2px solid black;    
+        border-radius: 5px;
+        display: flex;
+        padding: 5px;
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .section-1 .item-1 {
+        height: 20vh;
+        width: 30%;
+        background-color: gray;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .section-1 .item-2 {
+        height: 20vh;
+        width: 70%;
+        background-color: bisque;   
+        border-radius: 7px;
+        margin-left: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    @media screen and (max-width: 576px) {      
+        .section-1 .container {
+            flex-direction: column;
+        }
+    
+        .section-1 .item-1 {
+            height: 15vh;
+            width: 100%;
+        }
+    
+        .section-1 .item-2 {
+            height: 45vh;
+            width: 100%;
+            margin-left: 0;
+            margin-top: 5px;
+        }
+    }
+</code>
+                    </pre>
+                </div>
+
             </div>
         </section>
 
-        <section class="section-2">
-            <h1>Design a responsive grid layout</h1>
-            <div class="container">
-                <div class="item-1 box">1</div>
-                <div class="item-2 box">2</div>
-                <div class="item-3 box">3</div>
-                <div class="item-4 box">4</div>
+        <section>
+            <div class="section-2">
+                <h1>Design a responsive grid layout</h1>
+                <div class="container">
+                    <div class="item-1 box">1</div>
+                    <div class="item-2 box">2</div>
+                    <div class="item-3 box">3</div>
+                    <div class="item-4 box">4</div>
+                </div>
+            </div>
+            <div class="flex flex-wrap">
+
+                <div>
+                    <pre>
+<code>
+    < div class="section-2">
+        < h1>Design a responsive grid layout< /h1>  
+        < div class="container">
+            < div class="item-1 box">1< /div>
+            < div class="item-2 box">2< /div>
+            < div class="item-3 box">3< /div>
+            < div class="item-4 box">4< /div>
+        < /div>
+    < /div>
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .section-2 .item-1 {
+        background-color: lightcoral;   
+        grid-area: first;
+        height: 200px;
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .section-2 .item-2 {
+        background-color: orange;   
+        grid-area: second;
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .section-2 .item-3 {
+        background-color: violet;   
+        grid-area: third;
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .section-2 .item-4 {
+        background-color: cadetblue;    
+        grid-area: fourth;
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .section-2 .box {   
+        padding: 5px;
+        margin: 2px;
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .section-2 .container {
+        color: white;
+        font-weight: bold;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);  
+        grid-template-rows: auto;
+        grid-template-areas:
+            "first first second second"
+            "first first third fourth";
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    @media screen and (max-width: 576px) {
+        .section-2 .container {
+            grid-template-columns: repeat(1, 1fr);  
+            grid-template-rows: auto;
+            grid-template-areas:
+                "first"
+                "second"
+                "third"
+                "fourth";
+        }
+    
+        .section-2 .box {
+            padding: 5px;
+            margin: 2px;
+            height: 200px;
+            border-radius: 3px;
+        }
+    }
+</code>
+                    </pre>
+                </div>
+
             </div>
         </section>
     </main>

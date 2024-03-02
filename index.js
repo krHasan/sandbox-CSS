@@ -33,10 +33,10 @@ $(document).ready(function () {
                 'overflow-y', 'overflow', 'margin', 'padding', 'float', 'clear', 'position', 'content', 'perspective', 'origin', 'transform',
                 'transition', 'property', 'duration', 'timing-function', 'delay', 'text-align', 'letter-spacing',
                 'line-height', 'text', 'indent', 'shadow', 'white-space', 'word-spacing', 'decoration', 'text-justify', 'vertical-align',
-                'font-style', 'font-variant', 'font-weight', 'font-size', 'width', 'rule', 'gap', 'fill', 'columns', 'word-break',
-                'animation', 'play-state', 'direction', 'iteration', 'count', 'mode', 'column', 'list-style', 'box', 'outline-style',
-                'outline-color', 'outline-offset', 'outline', 'background', 'border', 'height', 'max', 'min', 'z-index', 'opacity', 
-            'visibility', 'page-break', 'pointer-events', 'cursor', 'counter'];
+                'font-style', 'font-variant', 'font-weight', 'font-size', 'width', 'rule', 'fill', 'columns', 'word-break',
+                'animation', 'play-state', 'direction', 'iteration', 'count', 'mode', 'list-style', 'box', 'outline-style',
+                'outline-color', 'outline-offset', 'outline', 'border', 'height', 'max', 'min', 'z-index', 'opacity', 
+            'visibility', 'page-break', 'pointer-events', 'cursor', 'counter', 'row-gap', 'column-gap', 'gap', 'background'];
             orangeArray.forEach(element => {
                 text = text.replace(new RegExp("\\b" + element + "\\b", "gi"), '<span style="color: #C16D27">$&</span>');
             })
@@ -45,8 +45,8 @@ $(document).ready(function () {
             let tealArray = ['none', 'left', 'right', 'both', 'auto', 'static', 'absolute', 'fixed', 'relative',
                 'sticky', 'visible', 'hidden', 'stretch', 'repeat', 'round', 'top', 'bottom', 'cover', 'contain', 'center',
                 'border-box', 'padding-box', 'content-box', 'scroll', 'local', 'solid', 'double', 'medium', 'thin', 'thick',
-                'invert', 'row', 'reverse', 'nowrap', 'wrap', 'flex-start', 'flex-end', 'space-between',
-                'space-around', 'baseline'];
+                'invert', 'nowrap', 'flex-start', 'flex-end', 'space-between', 'self-start', 'self-end',
+                'space-around', 'baseline', 'space-evenly', 'row-reverse', 'column-reverse', 'wrap-reverse', 'start', 'end'];
             tealArray.forEach(element => {
                 text = text.replace(new RegExp("\\b" + element + "\\b", "gi"), '<span style="color: #109cb2">$&</span>');
             })
