@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SandBox | Animation 1</title>
+    <link rel="icon" type="image/x-icon" href="./title-icon.png">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="page-animation1.css">
+    <script>
+        const pageName = 'page-animation1';
+    </script>
+    <script src="index.js"></script>
+</head>
+
+<body class="container mx-auto mb-56">
+    <header>
+        <div id="menuContainer"></div>
+    </header>
+
+    <main>
+        <section>
+            <div id="section-wave">
+                <div class="a_wave0"></div>
+                <div class="a_wave1"></div>
+                <div class="a_wave2"></div>
+                <div class="a_wave3"></div>
+                <div class="a_wave4"></div>
+                <div class="a_wave5"></div>
+                <div class="a_wave6"></div>
+            </div>
+
+            <div class="flex flex-wrap">
+
+                <div>
+                    <pre>
+<code>
+    < div id="section-wave">
+        < div class="a_wave0">< /div>   
+        < div class="a_wave1">< /div>
+        < div class="a_wave2">< /div>
+        < div class="a_wave3">< /div>
+        < div class="a_wave4">< /div>
+        < div class="a_wave5">< /div>
+        < div class="a_wave6">< /div>
+    < /div>
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    :root {
+        --m: 10.5;
+        --wavefreq: calc(100ms * var(--m));   
+    }
+    
+    #section-wave {
+        display: flex;
+        gap: 15px;
+        margin: 50px 0;
+        justify-content: center;
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    [class*='a_wave'] {
+        aspect-ratio: .125/1;
+        background-color: red;  
+        border-radius: 15px;
+        width: .5vw;
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    @keyframes waveform {
+        0% {
+            transform: scaleY(.5);
+        }
+        50% {
+            transform: scaleY(1.5);   
+        }
+        100% {
+            transform: scaleY(.5);
+        }
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    [class*='a_wave'] {
+        aspect-ratio: .125/1;
+        /*This can all be written on one line:*/    
+        animation: waveform var(--wavefreq)
+                    ease-in-out infinite
+                    forwards;
+        background-color: gray;
+        border-radius: 15px;
+        width: .5vw;
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .a_wave0 {
+        --wavefreq: calc(200ms * var(--m));   
+    }
+    
+    .a_wave1 {
+        --wavefreq: calc(210ms * var(--m));
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .a_wave2 {
+        --wavefreq: calc(220ms * var(--m));   
+    }
+    
+    .a_wave3 {
+        --wavefreq: calc(230ms * var(--m));
+    }
+</code>
+                    </pre>
+                </div>
+
+                <div>
+                    <pre>
+<code>
+    .a_wave4 {
+        --wavefreq: calc(240ms * var(--m));   
+    }
+    
+    .a_wave5 {
+        --wavefreq: calc(250ms * var(--m));
+    }
+    
+    .a_wave6 {
+        --wavefreq: calc(260ms * var(--m));
+    }
+</code>
+                    </pre>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

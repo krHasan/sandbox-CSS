@@ -1,0 +1,72 @@
+/*-------------------------------------
+*       Animated waveforms
+*------------------------------------*/
+:root {
+    --m: 10.5;
+    --wavefreq: calc(100ms * var(--m));
+}
+
+#section-wave {
+    display: flex;
+    gap: 15px;
+    margin: 50px 0;
+    justify-content: center;
+}
+
+[class*='a_wave'] {
+    aspect-ratio: .125/1;
+    background-color: red;
+    border-radius: 15px;
+    width: .5vw;
+}
+
+@keyframes waveform {
+    0% {
+        transform: scaleY(.5);
+    }
+    50% {
+        transform: scaleY(1.5);
+    }
+    100% {
+        transform: scaleY(.5);
+    }
+}
+
+[class*='a_wave'] {
+    aspect-ratio: .125/1;
+    /*This can all be written on one line:*/
+    animation: waveform var(--wavefreq)
+                ease-in-out infinite
+                forwards;
+    background-color: gray;
+    border-radius: 15px;
+    width: .5vw;
+}
+
+.a_wave0 {
+    --wavefreq: calc(200ms * var(--m));
+}
+
+.a_wave1 {
+    --wavefreq: calc(210ms * var(--m));
+}
+
+.a_wave2 {
+    --wavefreq: calc(220ms * var(--m));
+}
+
+.a_wave3 {
+    --wavefreq: calc(230ms * var(--m));
+}
+
+.a_wave4 {
+    --wavefreq: calc(240ms * var(--m));
+}
+
+.a_wave5 {
+    --wavefreq: calc(250ms * var(--m));
+}
+
+.a_wave6 {
+    --wavefreq: calc(260ms * var(--m));
+}

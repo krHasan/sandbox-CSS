@@ -45,6 +45,12 @@
         /* Roboto */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+        /* Rajdhani */
+        @font-face {
+            font-family: "Rajdhani";
+            src: url("./fonts/Rajdhani-Regular.ttf");
+        }
+        /* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap'); */
 
     </style>
 </head>
@@ -55,6 +61,61 @@
     </header>
 
     <main class="grid grid-cols-1 2xl:grid-cols-2 gap-3 mb-56">
+        <section>
+            <h1>Generic Font Family</h1>
+            <p>A generic font family in CSS is a fallback font category that represents a broad class of fonts. It ensures that if a specific font is not available on a user's device or browser, the browser will default to a similar font within that generic family. There are five generic font families in CSS:</p>
+            
+            <h3>serif</h3>
+            <p>- Fonts with decorative strokes at the ends of characters, often used for traditional and formal designs. Examples include Times New Roman, Georgia, and Palatino.</p>
+            <p>- For example: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio</p>
+            
+            <h3>sans-serif</h3>
+            <p>- Fonts without decorative strokes, known for their clean and modern appearance. Common examples include Arial, Helvetica, and Verdana.</p>
+            <p>- For example: Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L</p>
+            
+            <h3>monospace</h3>
+            <p>- Fonts where each character occupies the same amount of horizontal space, often used for code snippets or typewriter-style text. Examples include Courier New, Consolas, and Monaco.</p>
+            <p>- For example: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console</p>
+            
+            <h3>cursive</h3>
+            <p>- Fonts that mimic handwriting or calligraphy, adding a more personalized touch to text. Examples include Comic Sans MS, Brush Script, and Snell Roundhand.</p>
+            <p>- For example: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery</p>
+            
+            <h3>fantasy</h3>
+            <p>- Fonts that don't fit into the other categories, often unique or decorative in style. They are typically used for special effects or artistic purposes. Examples include Impact, Papyrus, and Chalkboard.</p>
+            <p>- For example: Papyrus, Herculanum, Party LET, Curlz MT, Harrington</p>
+        </section>
+
+        <section>
+            <h1>System font, or web-safe font</h1>
+            <p>A system font or web-safe font is one that’s already assumed to be on the vast majority of users’ devices, with no need for a web font to be downloaded.</p>
+            <ul>
+                <li style="font-family: Georgia, serif;">Georgia, serif</li>
+                <li style="font-family: 'Palatino Linotype', serif;">'Palatino Linotype', serif</li>
+                <li style="font-family: 'Book Antiqua', serif;">'Book Antiqua', serif</li>
+                <li style="font-family: Palatino, serif;">Palatino, serif</li>
+                <li style="font-family: 'Times New Roman', serif;">'Times New Roman', serif</li>
+                <li style="font-family: 'Brush Script MS', serif;">'Brush Script MS', serif</li>
+                <br>
+                <li style="font-family: Arial, sans-serif;">Arial, sans-serif</li>
+                <li style="font-family: Helvetica, sans-serif;">Helvetica, sans-serif</li>
+                <li style="font-family: 'Arial Black', sans-serif;">'Arial Black', sans-serif</li>
+                <li style="font-family: 'Comic Sans MS', cursive, sans-serif;">'Comic Sans MS', cursive, sans-serif</li>
+                <li style="font-family: Impact, sans-serif;">Impact, sans-serif</li>
+                <li style="font-family: Charcoal, sans-serif;">Charcoal, sans-serif</li>
+                <li style="font-family: 'Lucida Sans Unicode', sans-serif;">'Lucida Sans Unicode', sans-serif</li>
+                <li style="font-family: 'Lucida Grande', sans-serif;">'Lucida Grande', sans-serif</li>
+                <li style="font-family: Tahoma, sans-serif;">Tahoma, sans-serif</li>
+                <li style="font-family: Geneva, sans-serif;">Geneva, sans-serif</li>
+                <li style="font-family: 'Trebuchet MS', sans-serif;">'Trebuchet MS', sans-serif</li>
+                <li style="font-family: Verdana, sans-serif;">Verdana, sans-serif</li>
+                <br>
+                <li style="font-family: Courier, monospace;">Courier, monospace</li>
+                <li style="font-family: 'Courier New', monospace;">'Courier New', monospace</li>
+                <li style="font-family: 'Lucida Console', monospace;">'Lucida Console', monospace</li>
+            </ul>
+        </section>
+
         <!-- How to use Google Fonts -->
         <section>
             <h1>How to use Google Fonts</h1>
@@ -132,9 +193,9 @@
             </div>
         </section>
 
-        <!-- Ubuntu -->
+        <!-- Ubuntu, sans-serif -->
         <section style='font-family: "Ubuntu", sans-serif !important'>
-            <h1>Ubuntu</h1>
+            <h1>Ubuntu, sans-serif</h1>
             <div class="badge badge-accent mt-2">Declare</div>
             <div>
                 <pre>
@@ -169,9 +230,9 @@
             </div>
         </section>
 
-        <!-- Segoe UI Light -->
+        <!-- Segoe UI Light, sans-serif -->
         <section style='font-family: "Segoe UI Light", sans-serif !important'>
-            <h1>Segoe UI Light</h1>
+            <h1>Segoe UI Light, sans-serif</h1>
             <div class="badge badge-accent mt-2">Declare</div>
             <div>
                 <pre>
@@ -209,9 +270,9 @@
             </div>
         </section>
 
-        <!-- Roboto -->
+        <!-- Roboto, sans-serif -->
         <section style='font-family: "Roboto", sans-serif !important'>
-            <h1>Roboto</h1>
+            <h1>Roboto, sans-serif</h1>
             <div class="badge badge-accent mt-2">Declare</div>
             <div>
                 <pre>
@@ -241,6 +302,50 @@
             </div>
             <div class="font-container-box" style="font-size: 16px;">
                 <p>Font Size: 16</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+        </section>
+
+        <!-- Rajdhani, sans-serif -->
+        <section style='font-family: "Rajdhani", sans-serif !important'>
+            <h1>Rajdhani, sans-serif</h1>
+            <div>
+                <a href="https://kingsleygroup.co/" target="_blank" class="link link-primary">Example Site: kingsleygroup.co</a>
+            </div>
+            <div class="badge badge-accent mt-2">Declare</div>
+            <div>
+                <pre>
+<code style='font-family: "Rajdhani", sans-serif !important'>
+    /* Roboto */
+    @font-face {
+        font-family: "Rajdhani";
+        src: url("./fonts/Rajdhani-Regular.ttf");
+    }
+    /*@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap')*/
+</code>
+                </pre>
+            </div>
+            <div class="badge badge-accent mt-2">How to use</div>
+            <div>
+                <pre>
+<code style='font-family: "Rajdhani", sans-serif !important'>
+    style='font-family: "Rajdhani", sans-serif';
+</code>
+                </pre>
+            </div>
+            <div class="font-container-box" style="font-size: 14px;">
+                <p>Font Size: 14</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+            <div class="font-container-box" style="font-size: 16px;">
+                <p>Font Size: 16</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+                <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
+            </div>
+            <div class="font-container-box" style="font-size: 18px;">
+                <p>Font Size: 18</p>
                 <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
                 <p>Bangladesh, nestled in South Asia, boasts a rich tapestry of culture, history, and natural beauty. Its fertile plains are crisscrossed by numerous rivers, including the mighty Ganges, shaping a landscape known for its lush greenery. Dhaka, the bustling capital, pulsates with vibrant markets and historical landmarks like Lalbagh Fort. The country's economy, primarily agrarian, is diversifying into textiles and technology, propelling its growth.</p>
             </div>

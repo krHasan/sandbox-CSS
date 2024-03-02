@@ -7,16 +7,19 @@
     <title>CSS SandBox | Home</title>
     <link rel="icon" type="image/x-icon" href="./title-icon.png">
     <script src="jquery-3.6.0.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="index.css">
     <script>
         const pageName = 'home';
     </script>
     <script src="index.js"></script>
+    <style>
+
+    </style>
 </head>
 
-<body class="container mx-auto">
+<body class="container mx-auto" style="margin-bottom: 200px;">
     <header>
         <div id="menuContainer"></div>
     </header>
@@ -41,6 +44,223 @@
 </code>
                 </pre>
             </div>
+        </section>
+
+        <section>
+            <h1>Border</h1>
+            <h3>Border style</h3>
+            <p style="border-style: dotted">style="border-style: dotted"</p>
+            <p style="border-style: dashed">style="border-style: dashed"</p>
+            <p style="border-style: solid">style="border-style: solid"</p>
+            <p style="border-style: double">style="border-style: double"</p>
+            <p style="border-style: groove">style="border-style: groove"</p>
+            <p style="border-style: ridge">style="border-style: ridge"</p>
+            <p style="border-style: inset">style="border-style: inset"</p>
+            <p style="border-style: outset">style="border-style: outset"</p>
+            <p style="border-style: none">style="border-style: none"</p>
+            <p style="border-style: hidden">style="border-style: hidden"</p>
+            <p style="border-style: dotted dashed solid double">style="border-style: dotted dashed solid double"</p>
+        </section>
+
+        <section>
+            <h1>Outline</h1>
+            <h3>Outline Style</h3>
+            <p style="outline-style: dotted">style="outline-style: dotted"</p>
+            <p style="outline-style: dashed">style="outline-style: dashed"</p>
+            <p style="outline-style: solid">style="outline-style: solid"</p>
+            <p style="outline-style: double">style="outline-style: double"</p>
+            <p style="outline-style: groove">style="outline-style: groove"</p>
+            <p style="outline-style: ridge">style="outline-style: ridge"</p>
+            <p style="outline-style: inset">style="outline-style: inset"</p>
+            <p style="outline-style: outset">style="outline-style: outset"</p>
+
+            <h3>Outline Offset</h3>
+            <p style="border: 1px solid black; outline-style: solid; outline-offset: 5px;">style="border: 1px solid
+                black; outline-style: solid; outline-offset: 5px;"</p>
+        </section>
+
+        <section>
+            <h1>Text</h1>
+            <h3>Text alignment</h3>
+            <p style="text-align: center;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <div>
+                    <pre>
+<code>
+    style="text-align: center;"
+</code>
+                    </pre>
+                </div>
+            </p>
+            <p style="text-align: right;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <div>
+                    <pre>
+<code>
+    style="text-align: right;"
+</code>
+                    </pre>
+                </div>
+            </p>
+            <p style="text-align: justify;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <div>
+                    <pre>
+<code>
+    style="text-align: justify;"
+</code>
+                    </pre>
+                </div>
+            </p>
+
+            <br>
+            <h3>Text decoration</h3>
+            <p style="text-decoration: overline;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <div>
+                    <pre>
+<code>
+    style="text-decoration: overline;"
+</code>
+                    </pre>
+                </div>
+            </p>
+            </p>
+
+            <br>
+            <h3>Text transformation</h3>
+            <p style="text-transform: capitalize;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <div>
+                    <pre>
+<code>
+    style="text-transform: capitalize;"
+</code>
+                    </pre>
+                </div>
+            </p>
+
+            <br>
+            <h3>Text indentation</h3>
+            <p style="text-indent: 20px;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <div>
+                    <pre>
+<code>
+    style="text-indent: 20px;"
+</code>
+                    </pre>
+                </div>
+            </p>
+
+            <br>
+            <h3>Letter Spacing</h3>
+            <p style="letter-spacing: 5px;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <div>
+                    <pre>
+<code>
+    style="letter-spacing: 5px;"
+</code>
+                    </pre>
+                </div>
+            </p>
+
+            <br>
+            <h3>Line height</h3>
+            <p style="line-height: 30px;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <div>
+                    <pre>
+<code>
+    style="line-height: 30px;"
+</code>
+                    </pre>
+                </div>
+            </p>
+
+            <br>
+            <h3>Text derection</h3>
+            <p style="direction: rtl;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <div>
+                    <pre>
+<code>
+    style="direction: rtl;"
+</code>
+                    </pre>
+                </div>
+            </p>
+
+            <br>
+            <h3>Word Spacing</h3>
+            <p style="word-spacing: 10px;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <div>
+                    <pre>
+<code>
+    style="word-spacing: 10px;"
+</code>
+                    </pre>
+                </div>
+            </p>
+
+            <br>
+            <h3>Text Shadow</h3>
+            <p style="text-shadow: 1px 0px red;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                <div>
+                    <pre>
+<code>
+    style="text-shadow: 1px 0px red;"
+</code>
+                    </pre>
+                </div>
+            </p>
         </section>
     </main>
 

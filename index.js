@@ -7,19 +7,13 @@ $(document).ready(function () {
         elements.forEach(function (element) {
             var text = element.textContent;
 
-            // #045694 dark blue
-            let darkBlue = ['import'];
-            darkBlue.forEach(element => {
-                text = text.replace(new RegExp("\\b" + element + "\\b", "gi"), '<span style="color: #045694; font-weight: bold">$&</span>');
-            })
-
             // #015493 light blue
             let lightBlueArray = ['p', 'table', 'label', 'input', 'div', 'link', 'rel', 'href', 'crossorigin', 'url', 'active',
                 'checked', 'visited', 'hover', 'focus', 'disabled', 'enabled', 'empty', 'required', 'valid', 'invalid', 'in-range',
                 'target', 'root', 'read-write', 'read-only', 'out-of-range', 'optional', 'lang', 'not', 'only-child', 'first-child', 'last-child',
                 'nth-child', 'nth-last-child', 'only-of-type', 'first-of-type', 'last-of-type', 'nth-of-type', 'after', 'before', 'selection',
                 'first-line', 'first-letter', 'attr', 'calc', 'cubic-bezier', 'hsl', 'hsla', 'linear-gradient', 'repeating', 'radial-gradient',
-                'rgb', 'rgba', 'var', 'element', 'class', 'attribute', 'value', 'id'];
+                'rgb', 'rgba', 'var', 'element', 'class', 'attribute', 'value', 'id', 'keyframes', 'waveform', 'import'];
             lightBlueArray.forEach(element => {
                 text = text.replace(new RegExp("\\b" + element + "\\b", "gi"), '<span style="color: #015493">$&</span>');
             });
@@ -35,8 +29,9 @@ $(document).ready(function () {
                 'line-height', 'text', 'indent', 'shadow', 'white-space', 'word-spacing', 'decoration', 'text-justify', 'vertical-align',
                 'font-style', 'font-variant', 'font-weight', 'font-size', 'width', 'rule', 'fill', 'columns', 'word-break',
                 'animation', 'play-state', 'direction', 'iteration', 'count', 'mode', 'list-style', 'box', 'outline-style',
-                'outline-color', 'outline-offset', 'outline', 'border', 'height', 'max', 'min', 'z-index', 'opacity', 
-            'visibility', 'page-break', 'pointer-events', 'cursor', 'counter', 'row-gap', 'column-gap', 'gap', 'background'];
+                'outline-color', 'outline-offset', 'outline', 'border', 'height', 'max', 'min', 'z-index', 'opacity',
+                'visibility', 'page-break', 'pointer-events', 'cursor', 'counter', 'row-gap', 'column-gap', 'gap', 'background',
+                'aspect-ratio'];
             orangeArray.forEach(element => {
                 text = text.replace(new RegExp("\\b" + element + "\\b", "gi"), '<span style="color: #C16D27">$&</span>');
             })
