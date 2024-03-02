@@ -14,9 +14,6 @@
         const pageName = 'home';
     </script>
     <script src="index.js"></script>
-    <style>
-
-    </style>
 </head>
 
 <body class="container mx-auto" style="margin-bottom: 200px;">
@@ -25,6 +22,7 @@
     </header>
 
     <main>
+        <!-- media -->
         <section>
             <h1>How to use @media in CSS</h1>
             <h5>Source:
@@ -46,6 +44,7 @@
             </div>
         </section>
 
+        <!-- border -->
         <section>
             <h1>Border</h1>
             <h3>Border style</h3>
@@ -62,6 +61,7 @@
             <p style="border-style: dotted dashed solid double">style="border-style: dotted dashed solid double"</p>
         </section>
 
+        <!-- outline -->
         <section>
             <h1>Outline</h1>
             <h3>Outline Style</h3>
@@ -79,6 +79,7 @@
                 black; outline-style: solid; outline-offset: 5px;"</p>
         </section>
 
+        <!-- text -->
         <section>
             <h1>Text</h1>
             <h3>Text alignment</h3>
@@ -262,6 +263,134 @@
                 </div>
             </p>
         </section>
+
+        <!-- List -->
+        <section>
+            <h1>Lists</h1>
+            <h3>List item markers</h3>
+            <div style="display: flex; flex-wrap: wrap;">
+                <div>
+                    <ul style="list-style-type: circle;">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Water</li>
+                    </ul>
+                    <div>
+                        <pre>
+<code>
+    < ul style="list-style-type: circle;">  
+        < li>Coffee< /li>
+        < li>Tea< /li>
+        < li>Water< /li>
+    < /ul>
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <ul style="list-style-type: square;">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Water</li>
+                    </ul>
+                    <div>
+                        <pre>
+<code>
+    < ul style="list-style-type: square;">  
+        < li>Coffee< /li>
+        < li>Tea< /li>
+        < li>Water< /li>
+    < /ul>
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <ul style="list-style-type: upper-roman;">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Water</li>
+                    </ul>
+                    <div>
+                        <pre>
+<code>
+    < ul style="list-style-type: upper-roman;">  
+        < li>Coffee< /li>
+        < li>Tea< /li>
+        < li>Water< /li>
+    < /ul>
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <ul style="list-style-type: lower-alpha;">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Water</li>
+                    </ul>
+                    <div>
+                        <pre>
+<code>
+    < ul style="list-style-type: lower-alpha;">  
+        < li>Coffee< /li>
+        < li>Tea< /li>
+        < li>Water< /li>
+    < /ul>
+</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Position the list item markers</h3>
+                <div style="display: flex;">
+                    <div>
+                        <ul style="list-style-position: outside;">
+                            <li>Coffee: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                            <li>Tea: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                            <li>Water: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                        </ul>
+                        <div>
+                            <pre>
+<code>
+    < ul style="list-style-position: outside;">  
+        < li>Coffee: ...< /li>
+        < li>Tea: ...< /li>
+        < li>Water: ...< /li>
+    < /ul>
+</code>
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <ul style="list-style-position: inside;">
+                            <li>Coffee: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                            <li>Tea: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                            <li>Water: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                        </ul>
+                        <div>
+                            <pre>
+<code>
+    < ul style="list-style-position: inside;">  
+        < li>Coffee: ...< /li>
+        < li>Tea: ...< /li>
+        < li>Water: ...< /li>
+    < /ul>
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
     </main>
 
 </body>

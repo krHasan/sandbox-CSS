@@ -13,7 +13,7 @@ $(document).ready(function () {
                 'target', 'root', 'read-write', 'read-only', 'out-of-range', 'optional', 'lang', 'not', 'only-child', 'first-child', 'last-child',
                 'nth-child', 'nth-last-child', 'only-of-type', 'first-of-type', 'last-of-type', 'nth-of-type', 'after', 'before', 'selection',
                 'first-line', 'first-letter', 'attr', 'calc', 'cubic-bezier', 'hsl', 'hsla', 'linear-gradient', 'repeating', 'radial-gradient',
-                'rgb', 'rgba', 'var', 'element', 'class', 'attribute', 'value', 'id', 'keyframes', 'waveform', 'import'];
+                'rgb', 'rgba', 'var', 'element', 'class', 'attribute', 'value', 'id', 'keyframes', 'waveform', 'import', 'ul', 'li'];
             lightBlueArray.forEach(element => {
                 text = text.replace(new RegExp("\\b" + element + "\\b", "gi"), '<span style="color: #015493">$&</span>');
             });
@@ -28,7 +28,8 @@ $(document).ready(function () {
                 'transition', 'property', 'duration', 'timing-function', 'delay', 'text-align', 'letter-spacing',
                 'line-height', 'text', 'indent', 'shadow', 'white-space', 'word-spacing', 'decoration', 'text-justify', 'vertical-align',
                 'font-style', 'font-variant', 'font-weight', 'font-size', 'width', 'rule', 'fill', 'columns', 'word-break',
-                'animation', 'play-state', 'direction', 'iteration', 'count', 'mode', 'list-style', 'box', 'outline-style',
+                'animation', 'play-state', 'direction', 'iteration', 'count', 'mode', 'list-style-type', 'list-style-image',
+                'list-style', 'box', 'outline-style',
                 'outline-color', 'outline-offset', 'outline', 'border', 'height', 'max', 'min', 'z-index', 'opacity',
                 'visibility', 'page-break', 'pointer-events', 'cursor', 'counter', 'row-gap', 'column-gap', 'gap', 'background',
                 'aspect-ratio'];
@@ -40,7 +41,8 @@ $(document).ready(function () {
             let tealArray = ['none', 'left', 'right', 'both', 'auto', 'static', 'absolute', 'fixed', 'relative',
                 'sticky', 'visible', 'hidden', 'stretch', 'repeat', 'round', 'top', 'bottom', 'cover', 'contain', 'center',
                 'border-box', 'padding-box', 'content-box', 'scroll', 'local', 'solid', 'double', 'medium', 'thin', 'thick',
-                'invert', 'nowrap', 'flex-start', 'flex-end', 'space-between', 'self-start', 'self-end',
+                'invert', 'nowrap', 'flex-start', 'flex-end', 'space-between', 'self-start', 'self-end', 'inside', 'lower-alpha',
+                'upper-roman', 'square', 'circle',
                 'space-around', 'baseline', 'space-evenly', 'row-reverse', 'column-reverse', 'wrap-reverse', 'start', 'end'];
             tealArray.forEach(element => {
                 text = text.replace(new RegExp("\\b" + element + "\\b", "gi"), '<span style="color: #109cb2">$&</span>');

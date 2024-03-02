@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SandBox | Position</title>
+    <link rel="icon" type="image/x-icon" href="./title-icon.png">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        const pageName = 'page-position';
+    </script>
+    <script src="index.js"></script>
+</head>
+
+<body class="container mx-auto mb-56">
+    <header>
+        <div id="menuContainer"></div>
+    </header>
+
+    <main>
+        <section>
+            <h1>Position</h1>
+
+            <h3>Position: sticky</h3>
+            <div style="position: sticky; top: 0; width: 100%; background-color: #8000ff; color: white; text-align: center;">
+                <p>This is sticky position.</p>
+            </div>
+            <div>
+                <pre>
+<code>
+    < div style="position: sticky; top: 0; width: 100%; background-color: #8000ff; color: white; text-align: center;">
+        < p>This is sticky position.< /p>
+    < /div>
+</code>
+                </pre>
+            </div>
+
+            <h3 class="pb-10">Position: relative</h3>
+            <div style="height: 10vh; width: 10vw; background-color: purple;">
+                <div style="position: relative; left: 50%; bottom: 10%; height: 10vh; width: 10vw; background-color: cyan;">
+                    <div style="position: relative; left: 50%; bottom: 10%; height: 10vh; width: 10vw; background-color: tomato;">
+                        <p>They all are positioned relatively to their parents.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre>
+<code>
+    < div style="height: 10vh; width: 10vw; background-color: purple;">
+        < div style="position: relative; left: 50%; bottom: 10%; height: 10vh; width: 10vw; background-color: cyan;">
+            < div style="position: relative; left: 50%; bottom: 10%; height: 10vh; width: 10vw; background-color: tomato;">
+                < p>They all are positioned relatively to their parents.< /p>
+            < /div>
+        < /div>
+    < /div>
+</code>
+                </pre>
+            </div>
+
+            <h3 class="pb-10">Position: absolute</h3>
+            <div style="position: relative;height: 10vh; width: 10vw; background-color: gray;">
+                <div style="position: absolute; left: 50%; bottom: 10%;height: 10vh; width: 10vw; background-color: yellow;">
+                    <div style="position: absolute; left: 50%; bottom: 10%; height: 10vh; width: 10vw; background-color: deepskyblue;">
+                        <p>They all are positioned absolutely to their parents.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre>
+<code>
+    < div style="position: relative;height: 10vh; width: 10vw; background-color: gray;">
+        < div style="position: absolute; left: 50%; bottom: 10%;height: 10vh; width: 10vw; background-color: yellow;">
+            < div style="position: absolute; left: 50%; bottom: 10%; height: 10vh; width: 10vw; background-color: deepskyblue;">
+                < p>They all are positioned absolutely to their parents.< /p>
+            < /div>
+        < /div>
+    < /div>
+</code>
+                </pre>
+            </div>
+
+            <h3>Position: fixed</h3>
+            <div style="position: fixed; width: 10vw; right: 10vw; bottom: 10vh; background-color: navy; color: white;">
+                <p>This is fixed position.</p>
+            </div>
+            <div>
+                <pre>
+<code>
+    < div style="position: fixed; width: 10vw; right: 10vw; bottom: 10vh; background-color: navy; color: white;">
+        < p>This is fixed position.< /p>
+    < /div>
+</code>
+                </pre>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
