@@ -14,6 +14,18 @@
         const pageName = 'home';
     </script>
     <script src="index.js"></script>
+    <style>
+        .background {
+            height: 500px;
+            width: 100%;
+            background-image: url(./img/flower.png), url(./img/paper.jpeg);
+            /* background-position: right top, left top; */
+            background-position: center, center;
+            background-size: contain, auto;
+            background-size: 40% auto, auto;
+            background-repeat: no-repeat, repeat;
+        }
+    </style>
 </head>
 
 <body class="container mx-auto" style="margin-bottom: 200px;">
@@ -390,7 +402,208 @@
             </div>
 
         </section>
+
+        <!-- Overflow -->
+        <section>
+            <h1>Overflow</h1>
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; row-gap: 20px;">
+                <div>
+                    <h3>Overflow: visible</h3>
+                    <div style="overflow: visible; height: 80px; width: 400px; background: #e9e9e9; margin-bottom: 170px;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborum.
+                        <div style="width: 100%;">
+                            <pre>
+<code>
+    < div style="overflow: visible; height: 80px; width: 400px; background: #e9e9e9;">  
+        Lorem ipsum dolor ...
+    < /div>
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+    
+                <div>
+                    <h3>Overflow: hidden</h3>
+                    <div style="overflow: hidden; height: 80px; width: 400px; background: #e9e9e9; margin-bottom: 20px;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborum.
+                    </div>
+                    <div style="width: 410px;">
+                        <pre>
+<code>
+< div style="overflow: hidden; height: 80px; width: 400px; background: #e9e9e9;">  
+    Lorem ipsum dolor ....
+< /div>
+</code>
+                        </pre>
+                    </div>
+                </div>
+    
+                <div>
+                    <h3>Overflow: scroll</h3>
+                    <div style="overflow: scroll; height: 80px; width: 400px; background: #e9e9e9; margin-bottom: 20px;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborum.
+                    </div>
+                    <div style="width: 410px;">
+                        <pre>
+<code>
+< div style="overflow: scroll; height: 80px; width: 400px; background: #e9e9e9;">  
+    Lorem ipsum dolor ....
+< /div>
+</code>
+                        </pre>
+                    </div>
+                </div>
+            
+                <div>
+                    <h3>Overflow: auto</h3>
+                    <div style="overflow: auto; height: 80px; width: 400px; background: #e9e9e9; margin-bottom: 20px;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborum.
+                    </div>
+                    <div style="width: 410px;">
+                        <pre>
+<code>
+< div style="overflow: auto; height: 80px; width: 400px; background: #e9e9e9;">  
+    Lorem ipsum dolor ....
+< /div>
+</code>
+                        </pre>
+                    </div>
+                </div>
+            
+                <div>
+                    <h3>Overflow: x</h3>
+                    <div style="overflow-x: scroll; overflow-y: hidden; height: 80px; width: 400px; background: #e9e9e9; white-space: nowrap; margin-bottom: 20px;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborum.
+                    </div>
+                    <div style="width: 410px;">
+                        <pre>
+<code>
+< div style="overflow-x: scroll; overflow-y: hidden; height: 80px; width: 400px; background: #e9e9e9; white-space: nowrap;">  
+    Lorem ipsum dolor ....
+< /div>
+</code>
+                        </pre>
+                    </div>
+                </div>
+            
+                <div>
+                    <h3>Overflow: y</h3>
+                    <div style="overflow-x: hidden; overflow-y: scroll; height: 80px; width: 400px; background: #e9e9e9; margin-bottom: 20px;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborum.
+                    </div>
+                    <div style="width: 410px;">
+                        <pre>
+<code>
+< div style="overflow-x: hidden; overflow-y: scroll; height: 80px; width: 400px; background: #e9e9e9;">  
+    Lorem ipsum dolor ....
+< /div>
+</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Float -->
+        <section>
+            <h1>Float</h1>
+            <div>
+                <div>
+                    <h3>Float the image right</h3>
+                    <p><img src="img/card_photo_4.jpg" alt="Pineapple" style="float: right; margin-left: 15px; height: 150px;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+                        lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+                        auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+                        lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi,
+                        sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui
+                        eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
+                        porta. Cras ac leo purus. Mauris quis diam velit.
+                    </p>
+                    <div>
+                        <pre>
+<code>
+    < p>< img src="img/card_photo_4.jpg" alt="Pineapple" style="float: right; margin-left: 15px; height: 150px;">
+        Lorem ipsum ...
+    < /p>
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Float left </h3>
+                    <div style="overflow: auto; clear: both;">
+                        <div style="float: left; margin-left: 15px; background-color: cyan; height: 100px; width: 150px;">2</div>
+                        <div style="float: left; margin-left: 15px; background-color: lightblue; height: 100px; width: 150px;">3</div>
+                        <div style="float: right; margin-left: 15px; background-color: yellow; height: 100px; width: 150px;">4</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div style="overflow: auto; clear: both;">
+        < div style="float: left; margin-left: 15px; background-color: cyan; height: 100px; width: 150px;">2< /div>
+        < div style="float: left; margin-left: 15px; background-color: lightblue; height: 100px; width: 150px;">3< /div>  
+        < div style="float: right; margin-left: 15px; background-color: yellow; height: 100px; width: 150px;">4< /div>
+    < /div>
+</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
         
+        <!-- Background -->
+        <section>
+            <h1>Background Double Image</h1>
+            <div class="background">
+                <div>
+                    <pre style="background-color: transparent;">
+<code>
+    < div class="background">
+
+    < /div>
+
+    .background {
+        height: 500px;
+        width: 100%;
+        background-image: url(./img/flower.png), url(./img/paper.jpeg);
+        /* background-position: right top, left top; */
+        background-position: center, center;
+        background-size: contain, auto;
+        background-size: 40% auto, auto;
+        background-repeat: no-repeat, repeat;
+    }
+</code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+
     </main>
 
 </body>

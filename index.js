@@ -13,7 +13,7 @@ $(document).ready(function () {
                 'target', 'root', 'read-write', 'read-only', 'out-of-range', 'optional', 'lang', 'not', 'only-child', 'first-child', 'last-child',
                 'nth-child', 'nth-last-child', 'only-of-type', 'first-of-type', 'last-of-type', 'nth-of-type', 'after', 'before', 'selection',
                 'first-line', 'first-letter', 'attr', 'calc', 'cubic-bezier', 'hsl', 'hsla', 'linear-gradient', 'repeating', 'radial-gradient',
-                'rgb', 'rgba', 'var', 'element', 'class', 'attribute', 'value', 'id', 'keyframes', 'waveform', 'import', 'ul', 'li'];
+                'rgb', 'rgba', 'var', 'element', 'class', 'attribute', 'value', 'id', 'keyframes', 'waveform', 'import', 'ul', 'li', 'img'];
             lightBlueArray.forEach(element => {
                 text = text.replace(new RegExp("\\b" + element + "\\b", "gi"), '<span style="color: #015493">$&</span>');
             });

@@ -1,4 +1,70 @@
 /*-------------------------------------
+*       My Animation
+*------------------------------------*/
+.myanimation {
+    animation-name: mine;
+    animation-duration: 4s;
+    position: relative;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    margin: 0px 3%;
+    height: 15px;
+    border-radius: 40px;
+    background-color: red;
+    /*width: 90%;*/
+    animation-timing-function: cubic-bezier(0.510, 0.095, 0.545, 1.240);
+}
+
+@keyframes mine {
+    0%   {width:5%; background-color: red;}
+    25%  {width:94%; left: 0px; background-color: blue;}
+    50%  {width: 5%; left: 89%; background-color: DarkSlateGray;}
+    75%  {width: 94%; left: 0px; background-color: purple;}
+    100% {width: 5%; left: 0px; background-color: green;}
+}
+
+.ball {
+    position: absolute;
+    width: 14px;
+    height: 15px;
+    /*border-radius: 0% 0% 100% 100%;*/
+    background-color: black;
+    margin: -23px 43% 0px;
+}
+
+.ball::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.ball2 {
+    position: absolute;
+    width: 14px;
+    height: 15px;
+    /*border-radius: 100% 100% 0% 0%;*/
+    background-color: black;
+    margin: 23px 43% 0px;
+}
+
+.ball2::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+
+/*-------------------------------------
 *       Animated waveforms
 *------------------------------------*/
 :root {
