@@ -25,6 +25,13 @@
             background-size: 40% auto, auto;
             background-repeat: no-repeat, repeat;
         }
+    
+        .box {
+            width: 300px;
+            height: 200px;
+            background: yellow;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -604,6 +611,111 @@
             </div>
         </section>
 
+        <!-- Shadows -->
+        <section>
+            <h1>Shadows</h1>
+            <h2 style="text-shadow: 2px 2px 5px red;">style="text-shadow: 2px 2px 5px red;"</h2>
+            <h2 style="text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;">style="text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"</h2>
+            <h2 style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">style="color: white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;"</h2>
+            <h2 style="color: yellow; text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;">style="color: yellow; text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;"</h2>
+            <div class="box" style="box-shadow: 10px 10px 5px gray;">style="box-shadow: 10px 10px 5px gray;"</div>
+            <div class="box" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">style="box-shadow: <br/> 0 4px 8px 0 rgba(0, 0, 0, 0.2), <br/> 0 6px 20px 0 rgba(0, 0, 0, 0.19);"</div>
+        </section>
+
+        <!-- Text Effects -->
+        <section>
+            <h1>Text Effects</h1>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
+                <div>
+                    <h3>text-overflow: clip</h3>
+                    <p style="white-space: nowrap; width: 200px; border: 1px solid #000000; overflow: hidden; text-overflow: clip;">This is some long text that will not fit in the box</p>
+                    <div>
+                        <pre>
+<code>
+    .clip {
+        white-space: nowrap;
+        width: 200px;
+        border: 1px solid #000000;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>text-overflow: ellipsis</h3>
+                    <p style="white-space: nowrap; width: 200px; border: 1px solid #000000; overflow: hidden; text-overflow: ellipsis;">This is some long text that will not fit in the box</p>
+                    <div>
+                        <pre>
+<code>
+    .ellipsis {
+        white-space: nowrap;
+        width: 200px;
+        border: 1px solid #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Word-wrap: break-word</h3>
+                    <p style="width: 11em; border: 1px solid black; word-wrap: break-word;"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word
+                        will break and wrap to the next line.</p>
+                    <div>
+                        <pre>
+<code>
+    .text3 {
+        width: 11em;
+        border: 1px solid black;
+        word-wrap: break-word;
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>word-break: break-all</h3>
+                    <p style="width: 11em; border: 1px solid black; word-break: break-all;"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word
+                        will break and wrap to the next line.</p>
+                    <div>
+                        <pre>
+<code>
+    .text4 {
+        width: 11em;
+        border: 1px solid black;
+        word-break: break-all;
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>word-break: keep-all</h3>
+                    <p style="width: 11em; border: 1px solid black; word-break: keep-all;"> This paragraph contains a very long word: thisis-avery-veryver-yvery-veryv-erylong-word. The long
+                        word will break and wrap to the next line.</p>
+                    <div>
+                        <pre>
+<code>
+    .text5 {
+        width: 11em;
+        border: 1px solid black;
+        word-break: keep-all;
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
     </main>
 
 </body>

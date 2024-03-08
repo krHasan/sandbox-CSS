@@ -23,6 +23,609 @@
     </header>
 
     <main>
+        <!-- 2D Transforms -->
+        <section>
+            <h1>2D Transforms</h1>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; row-gap: 50px;">
+                <div>
+                    <h3>translate()</h3>
+                    <div class="twoD_box trans1">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.trans1:hover {
+    -ms-transform: translate(5px, 10px);
+    /* IE 9 */
+    -webkit-transform: translate(0px, 10px);
+    /* Safari */
+    transform: translate(5px, 10px);
+    /* Standard syntax */
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>rotate()</h3>
+                    <div class="twoD_box rotate">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.rotate:hover {
+    -ms-transform: rotate(20deg);
+    /* IE 9 */
+    -webkit-transform: rotate(20deg);
+    /* Safari */
+    transform: rotate(20deg);
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>scale()</h3>
+                    <div class="twoD_box scale">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.scale:hover {
+    -ms-transform: scale(1.3, 1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.3, 1.5);
+    /* Safari */
+    transform: scale(1.3, 1.5);
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>skewX()</h3>
+                    <div class="twoD_box skewx">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.skewx:hover {
+    -ms-transform: skewX(20deg);
+    /* IE 9 */
+    -webkit-transform: skewX(20deg);
+    /* Safari */
+    transform: skewX(20deg);
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>skewY()</h3>
+                    <div class="twoD_box skewy">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.skewy:hover {
+    -ms-transform: skewY(20deg);
+    /* IE 9 */
+    -webkit-transform: skewY(20deg);
+    /* Safari */
+    transform: skewY(20deg);
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>skew()</h3>
+                    <div class="twoD_box skew">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.skew:hover {
+    -ms-transform: skew(20deg, 10deg);
+    /* IE 9 */
+    -webkit-transform: skew(20deg, 10deg);
+    /* Safari */
+    transform: skew(20deg, 10deg);
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())</h3>
+                    <div class="twoD_box matrix">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.matrix:hover {
+    -ms-transform: matrix(1, -0.3, 0, 1, 0, 0);
+    /* IE 9 */
+    -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);
+    /* Safari */
+    transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Transforms -->
+        <section>
+            <h1>3D Transforms</h1>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; row-gap: 50px;">
+                <div>
+                    <h3>rotateX()</h3>
+                    <div class="twoD_box rotateX">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+    .rotateX:hover {
+        -webkit-transform: rotateX(150deg);
+        /* Safari */
+        transform: rotateX(150deg);
+    }
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>rotateY()</h3>
+                    <div class="twoD_box rotateY">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+    .rotateY:hover {
+        -webkit-transform: rotateY(150deg);
+        /* Safari */
+        transform: rotateY(150deg);
+    }
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>rotateZ()</h3>
+                    <div class="twoD_box rotateZ">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+    .rotateZ:hover {
+        -webkit-transform: rotateZ(150deg);
+        /* Safari */
+        transform: rotateZ(150deg);
+    }
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transitions -->
+        <section>
+            <h1>Transitions</h1>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; row-gap: 50px; column-gap: 50px;">
+                <div>
+                    <h3>rotateX()</h3>
+                    <div class="tran_box transition1">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.transition1 {
+    transition: width 2s;
+}
+
+.transition1:hover {
+    width: 400px;
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="tran_box transition2">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.transition2 {
+    transition: width 2s, height 2s;
+}
+
+.transition2:hover {
+    width: 400px;
+    height: 350px;
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="tran_box time1">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.time1 {
+    transition: width 1s;
+    transition-timing-function: linear;
+}
+
+.time1:hover {
+    width: 400px;
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="tran_box time2">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.time2 {
+    transition: width 1s;
+    transition-timing-function: ease;
+}
+
+.time2:hover {
+    width: 400px;
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="tran_box time3">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.time3 {
+    transition: width 1s;
+    transition-timing-function: ease-in;
+}
+
+.time3:hover {
+    width: 400px;
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="tran_box time4">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.time4 {
+    transition: width 1s;
+    transition-timing-function: ease-out;
+}
+
+.time4:hover {
+    width: 400px;
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="tran_box time5">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.time5 {
+    transition: width 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.time5:hover {
+    width: 400px;
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Transition delay</h3>
+                    <div class="tran_box delay">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.delay {
+    transition: width 1s;
+    transition-delay: 1s;
+}
+
+.delay:hover {
+    width: 400px;
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Transition + Transform</h3>
+                    <div class="tran_box trTr" style="width: 500px;">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.trTr {
+    transition: width 1s, height 1s, transform 1s;
+}
+
+.trTr:hover {
+    width: 400px;
+    height: 400px;
+    transform: rotate(180deg);
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>transition: -property -duration -timing-function -delay</h3>
+                    <div class="tran_box short">
+                        <div>
+                            <pre style="background: transparent;">
+<code>
+.short {
+    transition: width 1s linear 1s;
+}
+
+.short:hover {
+    width: 500px;
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Animation -->
+        <section>
+            <h1>Animation</h1>
+            <div style="display: flex; flex-wrap: wrap; column-gap: 100px; row-gap: 100px;">
+                <div>
+                    <div class="animation_box animation">
+                        <div>
+                            <pre>
+<code>
+    .animation:hover {
+        animation-name: example;
+        animation-duration: 4s;
+    }
+    
+    @keyframes example {
+        from {
+            background-color: teal;
+        }
+    
+        to {
+            background-color: yellow;
+        }
+    }
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="animation_box animation2">
+                        <div>
+                            <pre>
+<code>
+    .animation2:hover {
+        animation-name: example1;
+        animation-duration: 4s;
+    }
+    
+    @keyframes example1 {
+        0% { background-color: red;}
+    
+        25% { background-color: blue;}
+    
+        50% { background-color: yellow;}
+    
+        100% { background-color: green;}
+    }
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="animation_box animation3">
+                        <div>
+                            <pre>
+<code>
+.animation3 {
+    animation-name: example2;
+    animation-duration: 4s;
+    position: relative;
+}
+@keyframes example2 {
+    0% { background-color: red; left: 0px; top: 0px;}
+
+    25% { background-color: yellow; left: 200px; top: 0px;}
+
+    50% { background-color: blue; left: 200px; top: 200px; }
+
+    75% { background-color: green; left: 0px; top: 200px;}
+
+    100% { background-color: red; left: 0px; top: 0px;}
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Animation Iteration (refresh page to see effect)</h3>
+                    <div class="animation_box animation4">
+                        <div>
+                            <pre>
+<code>
+.animation4 {
+    animation-name: example3;
+    animation-duration: 4s;
+    position: relative;
+    animation-iteration-count: 2;
+}
+
+@keyframes example3 {
+    0% { background-color: red; left: 0px;top: 0px;}
+
+    25% { background-color: yellow; left: 200px; top: 0px; }
+
+    50% { background-color: blue; left: 200px; top: 200px; }
+
+    75% { background-color: green; left: 0px; top: 200px; }
+
+    100% { background-color: red; left: 0px; top: 0px; }
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Animation Direction: reverse (refresh page to see effect)</h3>
+                    <div class="animation_box reverse">
+                        <div>
+                            <pre>
+<code>
+.reverse {
+    animation-name: example4;
+    animation-duration: 4s;
+    position: relative;
+    animation-iteration-count: 4;
+    animation-direction: reverse;
+}
+
+@keyframes example4 {
+    0% { background-color: red; left: 0px; top: 0px; }
+
+    25% { background-color: yellow; left: 200px; top: 0px; }
+
+    50% { background-color: blue; left: 200px; top: 200px; }
+
+    75% { background-color: green; left: 0px; top: 200px; }
+
+    100% { background-color: red; left: 0px; top: 0px; }
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Animation Direction: alternate (refresh page to see effect)</h3>
+                    <div class="animation_box alternate">
+                        <div>
+                            <pre>
+<code>
+.alternate {
+    animation-name: example5;
+    animation-duration: 4s;
+    position: relative;
+    animation-iteration-count: 6;
+    animation-direction: alternate;
+}
+
+@keyframes example5 {
+    0% { background-color: red; left: 0px; top: 0px; }
+
+    25% { background-color: yellow; left: 200px; top: 0px; }
+
+    50% { background-color: blue; left: 200px; top: 200px; }
+
+    75% { background-color: green; left: 0px; top: 200px; }
+
+    100% { background-color: red; left: 0px; top: 0px; }
+}
+
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Fill Mode for Animation (refresh page to see effect)</h3>
+                    <div class="animation_box fill">
+                        <div>
+                            <pre>
+<code>
+    .fill {
+        animation-name: fill1;
+        animation-duration: 2s;
+        position: relative;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes fill1 {
+        from {
+            left: 0px;
+        }
+    
+        to {
+            left: 300px;
+            background-color: yellow;
+        }
+    }
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- My Animation -->
         <section>
             <h1>My Animation</h1>
@@ -128,6 +731,7 @@
             </div>
         </section>
 
+        <!-- Animated Waveforms -->
         <section>
             <h1>Animated Waveforms</h1>
             <div id="section-wave">
