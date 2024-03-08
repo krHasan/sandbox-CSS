@@ -28,26 +28,66 @@
             border: 2px dotted blue;
             text-align: center;
         }
+
+        .flex-order-box {
+            display: flex;
+            align-items: stretch;
+            background-color: DodgerBlue;
+            margin-bottom: 20px;
+        }
+
+        .flex-order-box>div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .flex-grow-box {
+            display: flex;
+            align-items: stretch;
+            background-color: DodgerBlue;
+            margin-bottom: 20px;
+        }
+        .flex-grow-box > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
     </style>
 </head>
 
 <body class="container mx-auto">
-    <header>
+    <header class="sticky top-0 bg-white">
         <div id="menuContainer"></div>
     </header>
 
     <main class="mb-56">
-        <h1>A Guide To FlexBox</h1>
-        <p>Source: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="link-primary" target="_blank" rel="noopener noreferrer">A Complete Guide to Flexbox</a></p>
-        <p>- aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic</p>
-        <p>- The main idea behind the flex layout is to give the container the ability to alter its items’ width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes)</p>
-        <p>- Flexbox layout is most appropriate to the components of an application, and small-scale layouts</p>
-        <p>- Since flexbox is a whole module and not a single property, it involves a lot of things including its whole set of properties. Some of them are meant to be set on the container (parent element, known as “flex container”) whereas the others are meant to be set on the children (said “flex items”)</p>
+        <!-- A Guide To FlexBox -->
+        <section>
+            <h1>A Guide To FlexBox</h1>
 
-        <h2>Properties</h2>
-        <div class="badge badge-accent mt-2">container</div>
-        <div>
-            <pre>
+            <p>Source: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="link-primary"
+                    target="_blank" rel="noopener noreferrer">A Complete Guide to Flexbox</a></p>
+            <p>- aims at providing a more efficient way to lay out, align and distribute space among items in a
+                container, even when their size is unknown and/or dynamic</p>
+            <p>- The main idea behind the flex layout is to give the container the ability to alter its items’
+                width/height (and order) to best fill the available space (mostly to accommodate to all kind of display
+                devices and screen sizes)</p>
+            <p>- Flexbox layout is most appropriate to the components of an application, and small-scale layouts</p>
+            <p>- Since flexbox is a whole module and not a single property, it involves a lot of things including its
+                whole set of properties. Some of them are meant to be set on the container (parent element, known as
+                “flex container”) whereas the others are meant to be set on the children (said “flex items”)</p>
+
+            <h2>Properties</h2>
+            <div class="badge badge-accent mt-2">container</div>
+            <div>
+                <pre>
 <code>
     display			: flex
     justify-content	: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe
@@ -60,12 +100,12 @@
     row-gap
     column-gap
 </code>
-            </pre>
-        </div>
+                </pre>
+            </div>
 
-        <div class="badge badge-accent mt-2">items</div>
-        <div>
-            <pre>
+            <div class="badge badge-accent mt-2">items</div>
+            <div>
+                <pre>
 <code>
     order			default is 0
     flex-grow		default 0
@@ -74,163 +114,286 @@
     flex			none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
     align-self		auto | flex-start | flex-end | center | baseline | stretch
 </code>
-            </pre>
-        </div>
+                </pre>
+            </div>
 
-        <h3>flex-flow</h3>
-        <p>- This is a shorthand for the flex-direction and flex-wrap properties</p>
-        <p>- The default value is row nowrap</p>
+            <h3>flex-flow</h3>
+            <p>- This is a shorthand for the flex-direction and flex-wrap properties</p>
+            <p>- The default value is row nowrap</p>
 
-        <h3>justify-content</h3>
-        <p>- default is flex-start</p>
-        <p>- use to make a child horizontal center</p>
+            <h3>justify-content</h3>
+            <p>- default is flex-start</p>
+            <p>- use to make a child horizontal center</p>
 
-        <h3>align-items</h3>
-        <p>- use to make a child vertically center</p>
+            <h3>align-items</h3>
+            <p>- use to make a child vertically center</p>
+        </section>
 
-        <h1>justify-content</h1>
-        <p>justify-content: flex-end</p>
-        <div class="flex-container" style="justify-content: flex-end;">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-        </div>
+        <!-- justify-content -->
+        <section>
+            <h1>justify-content</h1>
+            <p>justify-content: flex-end</p>
+            <div class="flex-container" style="justify-content: flex-end;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
 
-        <p>justify-content: center</p>
-        <div class="flex-container" style="justify-content: center;">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-        </div>
+            <p>justify-content: center</p>
+            <div class="flex-container" style="justify-content: center;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
 
-        <p>justify-content: space-between</p>
-        <div class="flex-container" style="justify-content: space-between;">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-        </div>
+            <p>justify-content: space-between</p>
+            <div class="flex-container" style="justify-content: space-between;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
 
-        <p>justify-content: space-around</p>
-        <div class="flex-container" style="justify-content: space-around;">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-        </div>
+            <p>justify-content: space-around</p>
+            <div class="flex-container" style="justify-content: space-around;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
 
-        <p>justify-content: space-evenly</p>
-        <div class="flex-container" style="justify-content: space-evenly;">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-        </div>
+            <p>justify-content: space-evenly</p>
+            <div class="flex-container" style="justify-content: space-evenly;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+        </section>
 
+        <!-- align-items -->
+        <section>
+            <h1>align-items</h1>
+            <p>align-items: flex-end</p>
+            <div class="flex-container" style="align-items: flex-end;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
 
-        <h1>align-items</h1>
-        <p>align-items: flex-end</p>
-        <div class="flex-container" style="align-items: flex-end;">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-        </div>
+            <p>align-items: center</p>
+            <div class="flex-container" style="align-items: center;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+        </section>
 
-        <p>align-items: center</p>
-        <div class="flex-container" style="align-items: center;">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-        </div>
+        <!-- align-content -->
+        <section>
+            <h1>align-content</h1>
+            <p>align-content: space-between;</p>
+            <div class="flex-container" style="align-content: space-between;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+        </section>
 
+        <!-- flex-direction -->
+        <section>
+            <h1>flex-direction</h1>
+            <p>flex-direction: row-reverse;</p>
+            <div class="flex-container" style="flex-direction: row-reverse;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
 
-        <h1>align-content</h1>
-        <p>need to more work on it</p>
-        <div class="flex-container" style="align-content: space-between;">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-        </div>
+            <p>flex-direction: column;</p>
+            <div class="flex-container" style="flex-direction: column; height: 200px;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
 
+            <p>flex-direction: column-reverse;</p>
+            <div class="flex-container" style="flex-direction: column-reverse; height: 200px;">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+            </div>
+        </section>
 
-        <h1>flex-direction</h1>
-        <p>flex-direction: row-reverse;</p>
-        <div class="flex-container" style="flex-direction: row-reverse;">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-        </div>
+        <!-- flex-wrap -->
+        <section>
+            <h1>flex-wrap</h1>
+            <p>flex-wrap: nowrap</p>
+            <div class="flex-container" style="flex-wrap: nowrap; width: 300px; height: 200px;">
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+            </div>
 
-        <p>flex-direction: column;</p>
-        <div class="flex-container" style="flex-direction: column; height: 200px;">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-        </div>
+            <p>flex-wrap: wrap;</p>
+            <div class="flex-container" style="flex-wrap: wrap; width: 300px; height: 200px;">
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+            </div>
 
-        <p>flex-direction: column-reverse;</p>
-        <div class="flex-container" style="flex-direction: column-reverse; height: 200px;">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-        </div>
+            <p>flex-wrap: wrap-reverse;</p>
+            <div class="flex-container" style="flex-wrap: wrap-reverse; width: 300px; height: 200px;">
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+                <div class="box">big content</div>
+            </div>
+        </section>
 
+        <!-- flex order -->
+        <section>
+            <h1>flex order</h1>
+            <div>
+                <div class="flex-order-box">
+                    <div style="order: 5">1</div>
+                    <div style="order: 1">2</div>
+                    <div style="order: 4">3</div>
+                    <div style="order: 2">4</div>
+                    <div style="order: 3">5</div>
+                </div>
+                <div class="flex flex-wrap">
+                    <div>
+                        <pre>
+<code>
+    < div class="flex-order-box">
+        < div style="order: 5">1< /div>
+        < div style="order: 1">2< /div>
+        < div style="order: 4">3< /div>
+        < div style="order: 2">4< /div>
+        < div style="order: 3">5< /div>
+    < /div>
+</code>
+                        </pre>
+                    </div>
 
-        <h1>flex-wrap</h1>
-        <p>flex-wrap: nowrap</p>
-        <div class="flex-container" style="flex-wrap: nowrap; width: 300px; height: 200px;">
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-        </div>
+                    <div>
+                        <pre>
+<code>
+    .flex-order-box {
+        display: flex;
+        align-items: stretch;
+        background-color: DodgerBlue;
+        margin-bottom: 20px;
+        }
+</code>
+                        </pre>
+                    </div>
 
-        <p>flex-wrap: wrap;</p>
-        <div class="flex-container" style="flex-wrap: wrap; width: 300px; height: 200px;">
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-        </div>
+                    <div>
+                        <pre>
+<code>
+    .flex-order-box > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        }
+</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <p>flex-wrap: wrap-reverse;</p>
-        <div class="flex-container" style="flex-wrap: wrap-reverse; width: 300px; height: 200px;">
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-            <div class="box">big content</div>
-        </div>
+        <!-- flex-grow -->
+        <section>
+            <h1>flex-grow</h1>
+
+            <div>
+                <div class="flex-grow-box">
+                    <div style="flex-grow: 2">1</div>
+                    <div style="flex-grow: 2">2</div>
+                    <div style="flex-grow: 8">3</div>
+                </div>
+                <div class="flex flex-wrap">
+                    <div>
+                        <pre>
+<code>
+    < div class="flex-grow-box">
+        < div style="flex-grow: 2">1< /div>
+        < div style="flex-grow: 2">2< /div>
+        < div style="flex-grow: 8">3< /div>
+    < /div>
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .flex-grow-box {
+        display: flex;
+        align-items: stretch;
+        background-color: DodgerBlue;
+        margin-bottom: 20px;
+    }
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .flex-grow-box > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 </body>

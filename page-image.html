@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SandBox | Image</title>
+    <link rel="icon" type="image/x-icon" href="./title-icon.png">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="page-image.css">
+    <script>
+        const pageName = 'page-image';
+    </script>
+    <script src="index.js"></script>
+    <style>
+        .background {
+            height: 500px;
+            width: 100%;
+            background-image: url(./img/flower.png), url(./img/paper.jpeg);
+            /* background-position: right top, left top; */
+            background-position: center, center;
+            background-size: contain, auto;
+            background-size: 40% auto, auto;
+            background-repeat: no-repeat, repeat;
+        }
+    </style>
+</head>
+
+<body class="container mx-auto">
+    <header class="sticky top-0 bg-white">
+        <div id="menuContainer"></div>
+    </header>
+
+    <main class="mb-56">
+        <!-- Background Double Image -->
+        <section>
+            <h1>Background Double Image</h1>
+            <div class="background">
+                <div>
+                    <pre style="background-color: transparent;">
+<code>
+    < div class="background">
+
+    < /div>
+
+    .background {
+        height: 500px;
+        width: 100%;
+        background-image: url(./img/flower.png), url(./img/paper.jpeg);
+        /* background-position: right top, left top; */
+        background-position: center, center;
+        background-size: contain, auto;
+        background-size: 40% auto, auto;
+        background-repeat: no-repeat, repeat;
+    }
+</code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive image gallery -->
+        <section>
+            <h1>Responsive Image Gallery</h1>
+            <div style="overflow: auto; clear: both;">
+                <div style="width: 25%; float: left;">
+                    <img src="img/card_photo_4.jpg" alt="card_photo_4.jpg" />
+                </div>
+
+                <div style="width: 25%; float: left;">
+                    <img src="img/card_photo_4.jpg" alt="card_photo_4.jpg" />
+                </div>
+
+                <div style="width: 25%; float: left;">
+                    <img src="img/card_photo_4.jpg" alt="card_photo_4.jpg" />
+                </div>
+
+                <div style="width: 25%; float: left;">
+                    <img src="img/card_photo_4.jpg" alt="card_photo_4.jpg" />
+                </div>
+            </div>
+            <div>
+                <pre>
+<code>
+    < div style="overflow: auto; clear: both;">
+        < div style="width: 25%; float: left;">
+            < img src="img/card_photo_4.jpg" />
+        < /div>
+
+        < div style="width: 25%; float: left;">
+            < img src="img/card_photo_4.jpg" />
+        < /div>
+
+        < div style="width: 25%; float: left;">
+            < img src="img/card_photo_4.jpg" />
+        < /div>
+
+        < div style="width: 25%; float: left;">
+            < img src="img/card_photo_4.jpg" />
+        < /div>
+    < /div>
+</code>
+                        </pre>
+            </div>
+        </section>
+
+        <!-- Styling Images -->
+        <section>
+            <h1>Styling Images</h1>
+
+            <div>
+                <h3>Thumbnail Images</h3>
+                <img class="thumb" src="img/paris.jpg" alt="paris.jpg" />
+                <div>
+                    <pre>
+<code>
+    .thumb {
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    .thumb:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+</code>
+                    </pre>
+                </div>
+            </div>
+
+            <div>
+                <h3>Responsive Images</h3>
+                <img class="responsive" src="img/trolltunga.jpg" alt="paris.jpg" />
+                <div>
+                    <pre>
+<code>
+    .responsive {
+        max-width: 100%;
+        height: auto;
+    }
+</code>
+                    </pre>
+                </div>
+            </div>
+
+            <div>
+                <h3>Center an image</h3>
+                <img class="center" src="img/paris.jpg" alt="paris.jpg" />
+                <div>
+                    <pre>
+<code>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</code>
+                    </pre>
+                </div>
+            </div>
+
+            <div>
+                <h3>Polaroid Images</h3>
+                <div class="polaroid">
+                    <img src="img/paris.jpg" alt="img/paris.jpg" style="width:100%">
+                    <div class="containerImg">
+                        <p>The Troll's tongue in Hardanger, Norway</p>
+                    </div>
+                </div>
+                <div>
+                    <pre>
+<code>
+    < div class="polaroid">
+        < img src="img/paris.jpg" alt="img/paris.jpg" style="width:100%">
+        < div class="containerImg">
+            < p>The Troll's tongue in Hardanger, Norway< /p>
+        < /div>
+    < /div>
+
+    .polaroid {
+        width: 50%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+    }
+
+    .containerImg {
+        text-align: center;
+        padding: 10px 20px;
+    }
+</code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Filters -->
+        <section>
+            <h1>Image Filters</h1>
+
+            <div class="flex flex-wrap">
+                <div>
+                    <h3>Original Image</h3>
+                    <div class="filterContainer">
+                        <img src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+                        <div class="filterName">Original Image</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div class="filterContainer">
+        < img src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+        < div class="filterName">Original Image< /div>
+    < /div>
+
+    .filterContainer {
+        position: relative;
+    }
+    
+    .filterName {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-size: 18px;
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="filterContainer">
+                        <img class="blur" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+                        <div class="filterName">filter: blur(4px)</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div class="filterContainer">
+        < img class="blur" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+        < div class="filterName">filter: blur(4px)< /div>
+    < /div>
+
+    .blur {
+        filter: blur(4px);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="filterContainer">
+                        <img class="brightness" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+                        <div class="filterName">brightness(250%)</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div class="filterContainer">
+        < img class="brightness" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+        < div class="filterName">brightness(250%)< /div>
+    < /div>
+
+    .brightness {
+        filter: brightness(250%);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="filterContainer">
+                        <img class="contrast" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+                        <div class="filterName">contrast(180%)</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div class="filterContainer">
+        < img class="contrast" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+        < div class="filterName">contrast(180%)< /div>
+    < /div>
+
+    .contrast {
+        filter: contrast(180%);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="filterContainer">
+                        <img class="grayscale" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+                        <div class="filterName">grayscale(100%)</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div class="filterContainer">
+        < img class="grayscale" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+        < div class="filterName">grayscale(100%)< /div>
+    < /div>
+
+    .grayscale {
+        filter: grayscale(100%);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="filterContainer">
+                        <img class="huerotate" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+                        <div class="filterName">hue-rotate(180deg)</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div class="filterContainer">
+        < img class="huerotate" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+        < div class="filterName">hue-rotate(180deg)< /div>
+    < /div>
+
+    .huerotate {
+        filter: hue-rotate(180deg);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="filterContainer">
+                        <img class="invert" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+                        <div class="filterName">invert(100%)</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div class="filterContainer">
+        < img class="invert" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+        < div class="filterName">invert(100%)< /div>
+    < /div>
+
+    .invert {
+        filter: invert(100%);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="filterContainer">
+                        <img class="opacity" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+                        <div class="filterName">opacity(50%)</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div class="filterContainer">
+        < img class="opacity" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+        < div class="filterName">opacity(50%)< /div>
+    < /div> 
+
+    .opacity {
+        filter: opacity(50%);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="filterContainer">
+                        <img class="saturate" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+                        <div class="filterName">saturate(7)</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div class="filterContainer">
+        < img class="saturate" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+        < div class="filterName">saturate(7)< /div>
+    < /div>
+
+    .saturate {
+        filter: saturate(7);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="filterContainer">
+                        <img class="sepia" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+                        <div class="filterName">sepia(100%)</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div class="filterContainer">
+        < img class="sepia" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+        < div class="filterName">sepia(100%)< /div>
+    < /div>
+
+    .sepia {
+        filter: sepia(100%);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="filterContainer">
+                        <img class="shadow" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+                        <div class="filterName">drop-shadow(8px 8px 10px green)</div>
+                    </div>
+                    <div>
+                        <pre>
+<code>
+    < div class="filterContainer">
+        < img class="shadow" src="img/pineapple.jpg" alt="img/pineapple.jpg" />
+        < div class="filterName">drop-shadow(8px 8px 10px green)< /div>
+    < /div>
+
+    .shadow {
+        filter: drop-shadow(8px 8px 10px green);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Image Hover Overlay -->
+        <section>
+            <h1>Image Hover Overlay</h1>
+
+            <div>
+                <div class="avaterContainer">
+                    <img class="avimage" src="img/avater.png" alt="img/avater.png" />
+                    <div class="overlay">
+                        <div class="text">Hello Rakib Hasan</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap">
+                    <div>
+                        <pre>
+<code>
+    < div class="avaterContainer">
+        < img class="avimage" src="img/avater.png" alt="img/avater.png" />
+        < div class="overlay">
+            < div class="text">Hello Rakib Hasan< /div>
+        < /div>
+    < /div>
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .avaterContainer {
+        position: relative;
+        width: 20%;
+    }
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .avimage {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #008CBA;
+    }
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .avaterContainer:hover .overlay {
+        opacity: 1;
+    }
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="avaterContainer1">
+                    <img class="avimage1" src="img/avater.png" alt="img/avater.png" />
+                    <div class="overlay1">
+                        <div class="text1">Hello Rakib Hasan</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap">
+                    <div>
+                        <pre>
+<code>
+    < div class="avaterContainer1">
+        < img class="avimage1" src="img/avater.png" alt="img/avater.png" />
+        < div class="overlay1">
+            < div class="text1">Hello Rakib Hasan< /div>
+        < /div>
+    < /div>
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .avaterContainer1 {
+        position: relative;
+        width: 20%;
+    }
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .avimage1 {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .overlay1 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        height: 0;
+        width: 100%;
+        transition: .5s ease;
+        background-color: #008CBA;
+    }
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .avaterContainer1:hover .overlay1 {
+        height: 100%;
+    }
+</code>
+                        </pre>
+                    </div>
+
+                    <div>
+                        <pre>
+<code>
+    .text1 {
+        white-space: nowrap;
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

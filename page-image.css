@@ -1,0 +1,162 @@
+/*--------------------------------------------
+ * Styling Images
+ *------------------------------------------*/
+.thumb {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.thumb:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.polaroid {
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+
+.containerImg {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.filterContainer {
+    position: relative;
+}
+
+.filterName {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 18px;
+}
+
+.blur {
+    filter: blur(4px);
+}
+
+.brightness {
+    filter: brightness(250%);
+}
+
+.contrast {
+    filter: contrast(180%);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.huerotate {
+    filter: hue-rotate(180deg);
+}
+
+.invert {
+    filter: invert(100%);
+}
+
+.opacity {
+    filter: opacity(50%);
+}
+
+.saturate {
+    filter: saturate(7);
+}
+
+.sepia {
+    filter: sepia(100%);
+}
+
+.shadow {
+    filter: drop-shadow(8px 8px 10px green);
+}
+
+
+.avaterContainer {
+    position: relative;
+    width: 20%;
+}
+
+.avimage {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.avaterContainer:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.avaterContainer1 {
+    position: relative;
+    width: 20%;
+}
+
+.avimage1 {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.avaterContainer1:hover .overlay1 {
+    height: 100%;
+}
+
+.text1 {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
